@@ -1,18 +1,18 @@
 # CRT Walls for Product-Functorial Isomorphism Encodings of Semiprime Factorization
 
-**Abstract.** We investigate whether integer factorization of an RSA semiprime $N = pq$ can be encoded as a small group or matrix-space isomorphism problem solvable by Babai's quasi-polynomial algorithm. The encoding would need to have size $\operatorname{poly}(\log N)$ and to recover $p, q$ from an isomorphism witness. We prove that this is impossible via product-functorial algebraic encodings: any such encoding either remains CRT-symmetric (carrying no $p/q$-distinguishing information) or already generates a factoring certificate before the isomorphism algorithm applies. We extend this to matrix-space invariants (adjoint algebra, centroid, radical) and to singular matrix spaces. The singular case exhibits a genuine boundary: publicly constructible singular matrix spaces can have locally asymmetric rank structure without containing an immediate factoring witness (Theorem 16.2, counterexample $\mathcal{S}_d$). However, any constructive witness for the asymmetry is polynomial-time equivalent to QR-witness extraction, which is factoring-equivalent under standard reductions (Theorem 16.3). The conclusion is a dichotomy: *no small explicit Babai encoding factors $N$, and the only remaining route — forced singular witness extraction — is equivalent to the known hardness of quadratic residuosity witness computation*.
+**Abstract.** We investigate whether integer factorization of an RSA semiprime $N = pq$ can be encoded as a small group or matrix-space isomorphism problem solvable by Babai's quasi-polynomial algorithm. The encoding would need to have size $\mathrm{poly}(\log N)$ and to recover $p, q$ from an isomorphism witness. We prove that this is impossible via product-functorial algebraic encodings: any such encoding either remains CRT-symmetric (carrying no $p/q$-distinguishing information) or already generates a factoring certificate before the isomorphism algorithm applies. We extend this to matrix-space invariants (adjoint algebra, centroid, radical) and to singular matrix spaces. The singular case exhibits a genuine boundary: publicly constructible singular matrix spaces can have locally asymmetric rank structure without containing an immediate factoring witness (Theorem 16.2, counterexample $\mathcal{S}_d$). However, any constructive witness for the asymmetry is polynomial-time equivalent to QR-witness extraction, which is factoring-equivalent under standard reductions (Theorem 16.3). The conclusion is a dichotomy: *no small explicit Babai encoding factors $N$, and the only remaining route — forced singular witness extraction — is equivalent to the known hardness of quadratic residuosity witness computation*.
 
 ---
 
 ## 1. Introduction
 
-Babai's quasi-polynomial graph isomorphism algorithm [Babai 2016] runs in time $n^{O(\log n)}$ for graphs on $n$ vertices. For $n = \operatorname{poly}(\log N)$, this gives complexity
+Babai's quasi-polynomial graph isomorphism algorithm [Babai 2016] runs in time $n^{O(\log n)}$ for graphs on $n$ vertices. For $n = \mathrm{poly}(\log N)$, this gives complexity
 
 $$
 \exp(O((\log \log N)^2)),
 $$
 
-which beats $L_N[1/3]$ asymptotically and would constitute a significant breakthrough for RSA factorization. This raises the question: can factorization of $N = pq$ be encoded as a small explicit group, graph, or matrix-space isomorphism problem of size $\operatorname{poly}(\log N)$?
+which beats $L_N[1/3]$ asymptotically and would constitute a significant breakthrough for RSA factorization. This raises the question: can factorization of $N = pq$ be encoded as a small explicit group, graph, or matrix-space isomorphism problem of size $\mathrm{poly}(\log N)$?
 
 The natural candidates are algebraic constructions over $R = \mathbb{Z}/N\mathbb{Z}$: unit groups, torsion subgroups of elliptic curves, matrix spaces arising from $R$-module structure. All of these are *product-functorial* — they decompose as $F(R) \cong F(\mathbb{F}_p) \times F(\mathbb{F}_q)$ via the Chinese Remainder Theorem. This product structure is the source of the obstruction.
 
@@ -61,12 +61,12 @@ These two problems must not be conflated. All "factoring-equivalent" claims in t
 
 ## 3. Product-functorial Babai encodings
 
-**Definition 3.1 (Babai-compatible instance).** A family $I(N)$ of group/graph/permutation instances is Babai-compatible if it is computable in time $\operatorname{poly}(\log N)$ and has size $n(N) = \operatorname{poly}(\log N)$.
+**Definition 3.1 (Babai-compatible instance).** A family $I(N)$ of group/graph/permutation instances is Babai-compatible if it is computable in time $\mathrm{poly}(\log N)$ and has size $n(N) = \mathrm{poly}(\log N)$.
 
 For Babai-compatible instances, the algorithm runs in time
 
 $$
-n^{O(\log n)} = \operatorname{poly}(\log N)^{O(\log \operatorname{poly}(\log N))} = \exp(O((\log\log N)^2)),
+n^{O(\log n)} = \mathrm{poly}(\log N)^{O(\log \mathrm{poly}(\log N))} = \exp(O((\log\log N)^2)),
 $$
 
 beating $L_N[1/3]$.
@@ -89,7 +89,7 @@ beating $L_N[1/3]$.
 
 ### Theorem 4.2 — CRT-Wall for product-functorial Babai encodings
 
-*Let $F$ be a product-functorial algebraic encoding and $N = pq$ squarefree. Suppose a Babai-compatible GI instance $I(N)$ of size $\operatorname{poly}(\log N)$ is constructed from $F(R)$. Then:*
+*Let $F$ be a product-functorial algebraic encoding and $N = pq$ squarefree. Suppose a Babai-compatible GI instance $I(N)$ of size $\mathrm{poly}(\log N)$ is constructed from $F(R)$. Then:*
 
 1. *(Symmetric case.) If the construction is invariant under swapping the two CRT components, every canonically computable isomorphism witness carries at most Jacobi-type symmetric information and cannot separate $p$ and $q$.*
 
@@ -119,7 +119,7 @@ We apply Theorem 4.2 to the natural algebraic candidates.
 
 ## 6. HPMI and matrix-space invariants
 
-The Hidden Product Matrix-space Isometry (HPMI) problem asks whether factorization can be encoded in a singular matrix space $\mathcal{M} \leq \operatorname{Mat}_m(R)$ that admits a natural isometry decomposition exploiting local rank asymmetry.
+The Hidden Product Matrix-space Isometry (HPMI) problem asks whether factorization can be encoded in a singular matrix space $\mathcal{M} \leq \mathrm{Mat}_m(R)$ that admits a natural isometry decomposition exploiting local rank asymmetry.
 
 **Theorem 6.1 — Extension to matrix-space invariants.** *Let $\mathcal{M}$ be a matrix space over $R$ and let $\Phi(\mathcal{M})$ be a product-compatible algebraic invariant (adjoint algebra, centroid, endomorphism ring, radical, determinantal ideals):*
 
@@ -129,15 +129,15 @@ $$\Phi(\mathcal{M}_R) \cong \Phi(\mathcal{M}_p) \times \Phi(\mathcal{M}_q).$$
 
 ### 6.2 Non-central projectors — the residual gap
 
-Not every idempotent in $\operatorname{Adj}(\mathcal{M})$ factors $N$. A matrix idempotent such as
+Not every idempotent in $\mathrm{Adj}(\mathcal{M})$ factors $N$. A matrix idempotent such as
 
-$$E = \begin{pmatrix}1&0\\0&0\end{pmatrix} \in \operatorname{Mat}_2(\mathbb{F}_p)$$
+$$E = \begin{pmatrix}1&0\\0&0\end{pmatrix} \in \mathrm{Mat}_2(\mathbb{F}_p)$$
 
 is a nontrivial projector but carries no CRT information about $p$ vs. $q$. Factorization follows only from a *central scalar* idempotent $eI$ with $e \in Z(R)$, $e^2 \equiv e \pmod{N}$, $e \notin \{0,1\}$.
 
-Formally: if $e \in \operatorname{Adj}(\mathcal{M})$ is a non-central idempotent, it gives a direct-sum decomposition of the $\mathcal{M}$-action but **not** a CRT decomposition of $R$ itself. Such non-central idempotents do not automatically yield $\gcd(e, N) \in \{p, q\}$.
+Formally: if $e \in \mathrm{Adj}(\mathcal{M})$ is a non-central idempotent, it gives a direct-sum decomposition of the $\mathcal{M}$-action but **not** a CRT decomposition of $R$ itself. Such non-central idempotents do not automatically yield $\gcd(e, N) \in \{p, q\}$.
 
-This creates a narrow residual gap: a non-central idempotent in $\operatorname{Adj}(\mathcal{M})$ might exist without factoring $N$. Whether any such idempotent can be constructed from $N$ alone, without factoring-equivalent data, is not ruled out by Theorem 6.1. All known natural constructions from $R$-data collapse to central decompositions or QR-witnesses; but we acknowledge this gap rather than silently closing it.
+This creates a narrow residual gap: a non-central idempotent in $\mathrm{Adj}(\mathcal{M})$ might exist without factoring $N$. Whether any such idempotent can be constructed from $N$ alone, without factoring-equivalent data, is not ruled out by Theorem 6.1. All known natural constructions from $R$-data collapse to central decompositions or QR-witnesses; but we acknowledge this gap rather than silently closing it.
 
 ---
 
@@ -145,9 +145,9 @@ This creates a narrow residual gap: a non-central idempotent in $\operatorname{A
 
 ### 7.1 Constructive witness wall (Theorem 16.1)
 
-**Theorem 7.1 — Constructive witness wall.** *Let $\mathcal{M} \leq \operatorname{Mat}_m(R)$ be publicly given. If an algorithm outputs a concrete matrix $M \in \mathcal{M}$ with $\operatorname{rank}_{\mathbb{F}_p}(M_p) \neq \operatorname{rank}_{\mathbb{F}_q}(M_q)$, or equivalently (after computing minors) a minor $\Delta$ with $\Delta \equiv 0 \pmod{p}$, $\Delta \not\equiv 0 \pmod{q}$, then $\gcd(\Delta, N)$ is a nontrivial factor.*
+**Theorem 7.1 — Constructive witness wall.** *Let $\mathcal{M} \leq \mathrm{Mat}_m(R)$ be publicly given. If an algorithm outputs a concrete matrix $M \in \mathcal{M}$ with $\mathrm{rank}_{\mathbb{F}_p}(M_p) \neq \mathrm{rank}_{\mathbb{F}_q}(M_q)$, or equivalently (after computing minors) a minor $\Delta$ with $\Delta \equiv 0 \pmod{p}$, $\Delta \not\equiv 0 \pmod{q}$, then $\gcd(\Delta, N)$ is a nontrivial factor.*
 
-*Proof.* If $\operatorname{rank}(M_p) < \operatorname{rank}(M_q)$, there exists a $(k+1)$-minor of $M_p$ that vanishes while the corresponding minor of $M_q$ does not. Its lift $\Delta \in R$ satisfies $\Delta \equiv 0 \pmod{p}$, $\Delta \not\equiv 0 \pmod{q}$, giving $1 < \gcd(\Delta, N) < N$. $\square$
+*Proof.* If $\mathrm{rank}(M_p) < \mathrm{rank}(M_q)$, there exists a $(k+1)$-minor of $M_p$ that vanishes while the corresponding minor of $M_q$ does not. Its lift $\Delta \in R$ satisfies $\Delta \equiv 0 \pmod{p}$, $\Delta \not\equiv 0 \pmod{q}$, giving $1 < \gcd(\Delta, N) < N$. $\square$
 
 ### 7.2 The strong wall is false — counterexample $\mathcal{S}_d$
 
@@ -156,10 +156,10 @@ This creates a narrow residual gap: a non-central idempotent in $\operatorname{A
 **Counterexample.** Choose public $d \in R^\ast$ with Jacobi symbol $\left(\frac{d}{N}\right) = -1$, computable in polynomial time without factorization. This forces $\left(\frac{d}{p}\right) \neq \left(\frac{d}{q}\right)$. Define
 
 $$
-\mathcal{S}_d = \left\{ \begin{pmatrix} x & dy & 0 \\ y & x & 0 \\ 0 & 0 & 0 \end{pmatrix} : x, y \in R \right\} \subseteq \operatorname{Mat}_3(R).
+\mathcal{S}_d = \left\{ \begin{pmatrix} x & dy & 0 \\ y & x & 0 \\ 0 & 0 & 0 \end{pmatrix} : x, y \in R \right\} \subseteq \mathrm{Mat}_3(R).
 $$
 
-Every element is singular. The $2 \times 2$ upper block has determinant $x^2 - dy^2$. Over $\mathbb{F}_r$, a nonzero rank-1 element exists iff $d$ is a quadratic residue mod $r$. Therefore $\operatorname{minrank}_{\mathbb{F}_p}(\mathcal{S}_d) \neq \operatorname{minrank}_{\mathbb{F}_q}(\mathcal{S}_d)$, yet no coefficient in the definition of $\mathcal{S}_d$ is a nontrivial zero-divisor modulo $N$. Local rank asymmetry exists publicly without an immediate factor. $\square$
+Every element is singular. The $2 \times 2$ upper block has determinant $x^2 - dy^2$. Over $\mathbb{F}_r$, a nonzero rank-1 element exists iff $d$ is a quadratic residue mod $r$. Therefore $\mathrm{minrank}_{\mathbb{F}_p}(\mathcal{S}_d) \neq \mathrm{minrank}_{\mathbb{F}_q}(\mathcal{S}_d)$, yet no coefficient in the definition of $\mathcal{S}_d$ is a nontrivial zero-divisor modulo $N$. Local rank asymmetry exists publicly without an immediate factor. $\square$
 
 ### 7.3 The singular matrixspace boundary (Theorem 16.3)
 

@@ -6,7 +6,7 @@
 
 ## 1. Introduction
 
-The real quadratic regulator $R_K$ of $K = \mathbb{Q}(\sqrt{D})$ is the logarithm of the fundamental unit $\varepsilon_D$. For $D = N = pq$, the BPW conjecture (Buchmann–Pethő–Williams) suggests that $\operatorname{FACTOR} \equiv \operatorname{REG}$ as complexity problems. This paper investigates the precise shape of this equivalence.
+The real quadratic regulator $R_K$ of $K = \mathbb{Q}(\sqrt{D})$ is the logarithm of the fundamental unit $\varepsilon_D$. For $D = N = pq$, the BPW conjecture (Buchmann–Pethő–Williams) suggests that $\mathrm{FACTOR} \equiv \mathrm{REG}$ as complexity problems. This paper investigates the precise shape of this equivalence.
 
 The main finding is that the equivalence, to the extent it holds, is mediated by a single object: the congruence trace $t_{mN} \bmod N$, where $(t_D, u_D)$ is the primitive solution of the Pell equation $t^2 - Du^2 = 4$. This residue is an $O(\log N)$-bit object, but extracting it nontrivially is equivalent to factoring $N$.
 
@@ -22,13 +22,13 @@ The main finding is that the equivalence, to the extent it holds, is mediated by
 
 A common source of confusion is the conflation of three distinct computational problems:
 
-**Proposition 2.1 (Precision trap).** $\operatorname{REG}_{\mathrm{num}} \not\equiv \operatorname{REG}_{\mathrm{unit}} \not\equiv \operatorname{Pell}$ as computational problems.
+**Proposition 2.1 (Precision trap).** $\mathrm{REG}_{\mathrm{num}} \not\equiv \mathrm{REG}_{\mathrm{unit}} \not\equiv \mathrm{Pell}$ as computational problems.
 
-*Proof.* (i) $\operatorname{REG}_{\mathrm{num}}$: a numerical approximation to $R_D$ with $\operatorname{poly}(\log D)$ bits. Extracting the class number $h$ from $hR$ requires error $< 1/(2h)$, polynomially many bits. This step is not the bottleneck.
+*Proof.* (i) $\mathrm{REG}_{\mathrm{num}}$: a numerical approximation to $R_D$ with $\mathrm{poly}(\log D)$ bits. Extracting the class number $h$ from $hR$ requires error $< 1/(2h)$, polynomially many bits. This step is not the bottleneck.
 
-(ii) $\operatorname{REG}_{\mathrm{unit}}$: a compact representation of $\varepsilon_D$ (e.g. as a continued fraction). This is strictly harder than numerical approximation.
+(ii) $\mathrm{REG}_{\mathrm{unit}}$: a compact representation of $\varepsilon_D$ (e.g. as a continued fraction). This is strictly harder than numerical approximation.
 
-(iii) $\operatorname{Pell}$: the exact integer pair $(t_D, u_D)$. Recovering $x = \cosh R_D = t_D/2$ from a numerical approximation $\hat R_D$ with error $\delta$ induces $|\Delta x| \approx e^{R_D} \cdot \delta$. To recover $x \bmod N$ exactly requires $\delta \lesssim e^{-R_D}$: exponential precision, exponentially expensive for large regulators. Hence $\operatorname{REG}_{\mathrm{num}}$ is strictly weaker than $\operatorname{Pell}$. $\square$
+(iii) $\mathrm{Pell}$: the exact integer pair $(t_D, u_D)$. Recovering $x = \cosh R_D = t_D/2$ from a numerical approximation $\hat R_D$ with error $\delta$ induces $|\Delta x| \approx e^{R_D} \cdot \delta$. To recover $x \bmod N$ exactly requires $\delta \lesssim e^{-R_D}$: exponential precision, exponentially expensive for large regulators. Hence $\mathrm{REG}_{\mathrm{num}}$ is strictly weaker than $\mathrm{Pell}$. $\square$
 
 ---
 
@@ -114,7 +114,7 @@ The open problem remaining after all closures:
 
 ## 9. Hallgren and the quantum–classical gap
 
-Hallgren's polynomial-time quantum algorithm for Pell's equation solves $\operatorname{Pell}$ in time $\operatorname{poly}(\log D)$ [Hallgren 2002]. Since OP4/H3 requires only $t_{mN} \bmod N$ — a much smaller output ($O(\log N)$ bits) — one might hope the weaker output is classically easier.
+Hallgren's polynomial-time quantum algorithm for Pell's equation solves $\mathrm{Pell}$ in time $\mathrm{poly}(\log D)$ [Hallgren 2002]. Since OP4/H3 requires only $t_{mN} \bmod N$ — a much smaller output ($O(\log N)$ bits) — one might hope the weaker output is classically easier.
 
 The obstruction is not the output size. It is access to the **labelled global infrastructure state**: the specific congruence class of the Pell solution modulo $N$. This information is not determined by $R_D$ alone; it is congruence-sensitive, attached to a specific hyperbolic/Pell class.
 
@@ -130,7 +130,7 @@ The Hallgren comparison therefore strengthens, not weakens, the OP4 barrier: it 
 
 The regulator–factorization complexity bridge has a precise shape:
 
-- $\operatorname{REG}_{\mathrm{num}} < \operatorname{REG}_{\mathrm{unit}} \approx \operatorname{Pell}$ in difficulty.
+- $\mathrm{REG}_{\mathrm{num}} < \mathrm{REG}_{\mathrm{unit}} \approx \mathrm{Pell}$ in difficulty.
 - Generating $t_{mN} \bmod N$ nontrivially $\equiv$ factoring (Lemma 5.1).
 - All four natural routes to the trace residue collapse to the CRT wall.
 - The predicate-only version of OP4 is false; only the generator version is factoring-equivalent.

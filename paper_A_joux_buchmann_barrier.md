@@ -42,7 +42,7 @@ K3 and K4 are the heart of the $L[1/4]$ gain. Without them, the algorithm would 
 
 **K2 (on-the-fly relations):** Principal ideal relations exist and can be collected. However, no norm-shrinking identity analogous to $X^q \equiv h_0/h_1$ is known. Relations cannot be recycled via a target-specific descent step. *Status: operationally yellow, functionally red for the BGJT mechanism.*
 
-**K3 (Frobenius symmetry):** The intrinsic automorphism group is $\operatorname{Aut}_{\mathbb{Q}}(K) = \{1, \iota\}$ where $\iota(\sqrt{N}) = -\sqrt{N}$. This two-element group cannot supply a large fixed locus or a Frobenius-type splitting identity. The degree-2 constraint is fundamental: real quadratic fields have no intermediate subfields, so no iterated Frobenius collapses degree. *Status: fail.*
+**K3 (Frobenius symmetry):** The intrinsic automorphism group is $\mathrm{Aut}_{\mathbb{Q}}(K) = \{1, \iota\}$ where $\iota(\sqrt{N}) = -\sqrt{N}$. This two-element group cannot supply a large fixed locus or a Frobenius-type splitting identity. The degree-2 constraint is fundamental: real quadratic fields have no intermediate subfields, so no iterated Frobenius collapses degree. *Status: fail.*
 
 **K4 (tower descent):** No intermediate subfields exist. External tower constructions fail due to discriminant growth, class-field data requirements, or loss of connection to $R_K$. The regulator does not factorize under tower extension in a norm-decreasing way. *Status: fail.*
 
