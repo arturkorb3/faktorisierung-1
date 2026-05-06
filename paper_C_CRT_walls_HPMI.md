@@ -52,7 +52,7 @@ The two projections $\pi_p: R \to \mathbb{F}_p$ and $\pi_q: R \to \mathbb{F}_q$ 
 
 For $d \in R^\ast$:
 
-- **QR-Decision:** Compute $\left(\frac{d}{N}\right)$ (the Jacobi symbol). *Easy:* polynomial-time algorithm, no factoring required.
+- **QR-Decision:** Compute $\bigl(\frac{d}{N}\bigr)$ (the Jacobi symbol). *Easy:* polynomial-time algorithm, no factoring required.
 - **QR-Witness:** Find $(x, y)$ with $x^2 \equiv dy^2 \pmod{N}$, $(x,y)$ nontrivial (i.e., $xy \not\equiv 0$ and $x/y$ is not a square root of $d$ modulo both $p$ and $q$ simultaneously). *Hard:* factoring-equivalent under standard reductions (see §8).
 
 These two problems must not be conflated. All "factoring-equivalent" claims in this paper refer to QR-*Witness*, not QR-Decision.
@@ -153,10 +153,10 @@ This creates a narrow residual gap: a non-central idempotent in $\mathrm{Adj}(\m
 
 **Theorem 7.2 — Strong wall is false.** *The statement "every publicly constructible locally asymmetric singular matrix space already contains a factoring witness" is false.*
 
-**Counterexample.** Choose public $d \in R^\ast$ with Jacobi symbol $\left(\frac{d}{N}\right) = -1$, computable in polynomial time without factorization. This forces $\left(\frac{d}{p}\right) \neq \left(\frac{d}{q}\right)$. Define
+**Counterexample.** Choose public $d \in R^\ast$ with Jacobi symbol $\bigl(\frac{d}{N}\bigr) = -1$, computable in polynomial time without factorization. This forces $\bigl(\frac{d}{p}\bigr) \neq \bigl(\frac{d}{q}\bigr)$. Define
 
 $$
-\mathcal{S}_d = \left\{ \begin{pmatrix} x & dy & 0 \\ y & x & 0 \\ 0 & 0 & 0 \end{pmatrix} : x, y \in R \right\} \subseteq \mathrm{Mat}_3(R).
+\mathcal{S}_d = \bigl\{ \begin{pmatrix} x & dy & 0 \\ y & x & 0 \\ 0 & 0 & 0 \end{pmatrix} : x, y \in R \bigr\} \subseteq \mathrm{Mat}_3(R).
 $$
 
 Every element is singular. The $2 \times 2$ upper block has determinant $x^2 - dy^2$. Over $\mathbb{F}_r$, a nonzero rank-1 element exists iff $d$ is a quadratic residue mod $r$. Therefore $\mathrm{minrank}_{\mathbb{F}_p}(\mathcal{S}_d) \neq \mathrm{minrank}_{\mathbb{F}_q}(\mathcal{S}_d)$, yet no coefficient in the definition of $\mathcal{S}_d$ is a nontrivial zero-divisor modulo $N$. Local rank asymmetry exists publicly without an immediate factor. $\square$
@@ -173,15 +173,15 @@ We make explicit the interreduction between factoring and QR-Witness extraction 
 
 **QR-Witness problem.** Given $N = pq$ and $d \in R^\ast$, find $(x,y) \in R^2$ nontrivially satisfying $x^2 \equiv dy^2 \pmod{N}$.
 
-The interreduction is stated for the $\mathcal{S}_d$ case where $\left(\frac{d}{N}\right) = -1$, so $d$ is a QR mod exactly one of $p, q$.
+The interreduction is stated for the $\mathcal{S}_d$ case where $\bigl(\frac{d}{N}\bigr) = -1$, so $d$ is a QR mod exactly one of $p, q$.
 
-**Factoring $\Rightarrow$ QR-Witness (asymmetric isotropic construction).** Given $p, q$: WLOG $\left(\frac{d}{p}\right) = +1$ and $\left(\frac{d}{q}\right) = -1$. Set
+**Factoring $\Rightarrow$ QR-Witness (asymmetric isotropic construction).** Given $p, q$: WLOG $\bigl(\frac{d}{p}\bigr) = +1$ and $\bigl(\frac{d}{q}\bigr) = -1$. Set
 
 $$x_p \equiv \sqrt{d} \pmod{p}, \quad y_p \equiv 1 \pmod{p}, \qquad x_q \equiv 0 \pmod{q}, \quad y_q \equiv 0 \pmod{q}.$$
 
 CRT-lift to $(x, y) \in R^2$. Then $x^2 - dy^2 \equiv 0 \pmod{p}$ (since $x_p^2 = d$) and $x^2 - dy^2 \equiv 0 \pmod{q}$ (since $x_q = y_q = 0$), so $x^2 \equiv dy^2 \pmod{N}$. But $x \equiv 0 \pmod{q}$ while $x \not\equiv 0 \pmod{p}$, so $x$ is a nontrivial zero-divisor and $\gcd(x, N) = q$.
 
-**QR-Witness $\Rightarrow$ Factoring.** Given any $(x,y)$ with $x^2 \equiv dy^2 \pmod{N}$ and $(x,y)$ nontrivial: since $\left(\frac{d}{N}\right) = -1$, no global solution with $xy$ invertible modulo $N$ exists — concretely, if $y \in R^\ast$ then $(x/y)^2 \equiv d \pmod{N}$ would give a global square root of $d$, contradicting the Jacobi condition; hence $x$ or $y$ must be a zero-divisor. Therefore at least one of $x, y, x^2 - dy^2$ is a nontrivial zero-divisor, and $\gcd(x, N)$, $\gcd(y, N)$, or $\gcd(x^2 - dy^2, N)$ factors $N$.
+**QR-Witness $\Rightarrow$ Factoring.** Given any $(x,y)$ with $x^2 \equiv dy^2 \pmod{N}$ and $(x,y)$ nontrivial: since $\bigl(\frac{d}{N}\bigr) = -1$, no global solution with $xy$ invertible modulo $N$ exists — concretely, if $y \in R^\ast$ then $(x/y)^2 \equiv d \pmod{N}$ would give a global square root of $d$, contradicting the Jacobi condition; hence $x$ or $y$ must be a zero-divisor. Therefore at least one of $x, y, x^2 - dy^2$ is a nontrivial zero-divisor, and $\gcd(x, N)$, $\gcd(y, N)$, or $\gcd(x^2 - dy^2, N)$ factors $N$.
 
 **Consequence for $\mathcal{S}_d$.** Finding a rank-1 element in $\mathcal{S}_d$ requires producing exactly such an asymmetric isotropic witness. Both directions of the interreduction hold, confirming polynomial-time equivalence to factoring under standard randomized reductions.
 
