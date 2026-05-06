@@ -1,4 +1,4 @@
-# Faktorisierung 1
+# CRT Barriers in Classical Integer Factorization
 
 This repository collects three exploratory research manuscripts on structural barriers in classical integer factorization.
 
