@@ -156,7 +156,7 @@ This creates a narrow residual gap: a non-central idempotent in $\mathrm{Adj}(\m
 **Counterexample.** Choose public $d \in R^\ast$ with Jacobi symbol $\bigl(\frac{d}{N}\bigr) = -1$, computable in polynomial time without factorization. This forces $\bigl(\frac{d}{p}\bigr) \neq \bigl(\frac{d}{q}\bigr)$. Define
 
 $$
-\mathcal{S}_d = \bigl\{ \begin{pmatrix} x & dy & 0 \\ y & x & 0 \\ 0 & 0 & 0 \end{pmatrix} : x, y \in R \bigr\} \subseteq \mathrm{Mat}_3(R).
+\mathcal{S}_d = \bigl\lbrace \begin{pmatrix} x & dy & 0 \\ y & x & 0 \\ 0 & 0 & 0 \end{pmatrix} : x, y \in R \bigr\rbrace \subseteq \mathrm{Mat}_3(R).
 $$
 
 Every element is singular. The $2 \times 2$ upper block has determinant $x^2 - dy^2$. Over $\mathbb{F}_r$, a nonzero rank-1 element exists iff $d$ is a quadratic residue mod $r$. Therefore $\mathrm{minrank}_{\mathbb{F}_p}(\mathcal{S}_d) \neq \mathrm{minrank}_{\mathbb{F}_q}(\mathcal{S}_d)$, yet no coefficient in the definition of $\mathcal{S}_d$ is a nontrivial zero-divisor modulo $N$. Local rank asymmetry exists publicly without an immediate factor. $\square$
