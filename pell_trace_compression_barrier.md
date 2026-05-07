@@ -132,7 +132,10 @@ The Hallgren comparison therefore strengthens, not weakens, the OP4 barrier: it 
 
 The regulator–factorization complexity bridge has a precise shape:
 
-- Difficulty ordering: $\mathrm{REG}_{\mathrm{num}} \lt \mathrm{REG}_{\mathrm{unit}} \approx \mathrm{Pell}$.
+$$\mathrm{REG}_{\mathrm{num}} < \mathrm{REG}_{\mathrm{unit}} \approx \mathrm{Pell} \quad\text{(strictly increasing difficulty).}$$
+
+Further findings:
+
 - Generating $t_{mN} \bmod N$ nontrivially $\equiv$ factoring (Lemma 5.1).
 - All four natural routes to the trace residue collapse to the CRT wall.
 - The predicate-only version of OP4 is false; only the generator version is factoring-equivalent.
