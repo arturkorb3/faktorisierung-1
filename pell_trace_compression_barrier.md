@@ -70,7 +70,7 @@ Let $A$ be an algorithm that, on input $(N, m)$, returns $T_m = t_{mN} \bmod N$ 
 
 ## 6. The predicate-only OP4 is false
 
-**Proposition 6.1.** *The following statement is false: "A recognizer $\Pi_0$ for nontrivial square roots of $1$ modulo $N$ is factoring-equivalent."*
+**Proposition 6.1.** The following statement is false: "A recognizer $\Pi_0$ for nontrivial square roots of $1$ modulo $N$ is factoring-equivalent."
 
 *Proof.* The recognizer $\Pi_0(x) = [x^2 \equiv 1 \bmod N \text{ and } x \not\equiv \pm 1 \bmod N]$ is trivially implementable: compute $x^2 \bmod N$ and compare with $1, N-1$. This requires no knowledge of $p, q$ and takes $O((\log N)^2)$ time. Hence $\Pi_0$ is not factoring-equivalent. $\square$
 
@@ -103,10 +103,10 @@ The open problem remaining after all closures:
 
 Any classical algorithm that computes, for enough small multipliers $m$, a trace residue $t_{mN} \bmod N$ nontrivially with non-negligible probability must perform at least one of:
 
-1. *compute a compact representation of $\varepsilon_{mN}$;*
-2. *solve PIP or an infrastructure-distance problem;*
-3. *process effective level-$N$ congruence data of size $N^{1-o(1)}$;*
-4. *construct a nontrivial CRT idempotent in $\mathbb{Z}/N\mathbb{Z}$.*
+1. compute a compact representation of $\varepsilon_{mN}$;
+2. solve PIP or an infrastructure-distance problem;
+3. process effective level-$N$ congruence data of size $N^{1-o(1)}$;
+4. construct a nontrivial CRT idempotent in $\mathbb{Z}/N\mathbb{Z}$.
 
 If true, this closes OP4/H3 negatively. If false, any counterexample computing nontrivial trace residues yields, by Lemma 5.1, a factoring algorithm of the same asymptotic complexity. If that complexity is sub-$L_N[1/3]$ or better, it is an NFS-beating factoring breakthrough.
 
@@ -132,7 +132,7 @@ The Hallgren comparison therefore strengthens, not weakens, the OP4 barrier: it 
 
 The regulator–factorization complexity bridge has a precise shape:
 
-- $\mathrm{REG}_{\mathrm{num}} < \mathrm{REG}_{\mathrm{unit}} \approx \mathrm{Pell}$ in difficulty.
+- $\mathrm{REG}_{\mathrm{num}} \lt \mathrm{REG}_{\mathrm{unit}} \approx \mathrm{Pell}$ in difficulty.
 - Generating $t_{mN} \bmod N$ nontrivially $\equiv$ factoring (Lemma 5.1).
 - All four natural routes to the trace residue collapse to the CRT wall.
 - The predicate-only version of OP4 is false; only the generator version is factoring-equivalent.
