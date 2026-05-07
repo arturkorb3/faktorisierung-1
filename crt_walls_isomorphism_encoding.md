@@ -92,7 +92,7 @@ Let $F$ be a product-functorial encoding with $F(R) \cong F(\mathbb{F}_p) \times
 
 *Proof.* By Definition 3.3, $w$ enables computation of $e \in R$ with $e^2 = e$, $e \neq 0, 1$. By the Idempotent–Factor Lemma, $\gcd(e, N)$ is a nontrivial factor of $N$. $\square$
 
-**Remark.** The content of the lemma is not tautological: it identifies the *effectively CRT-separating* condition as the right hypothesis, and rules out two spurious strengthenings — (a) that every isomorphism witness is CRT-separating (false: CRT-symmetric witnesses are not), and (b) that the construction needs to proceed through Babai (false: the idempotent is extracted before isomorphism is needed). More concretely: if $w$ contains an element $g \in G$ whose order divides $|F(\mathbb{F}_p)|$ but not $|F(\mathbb{F}_q)|$, set $k = |F(\mathbb{F}_p)|$. Then $g^k \equiv 1 \pmod{p}$ and $g^k \not\equiv 1 \pmod{q}$, so $g^k - 1$ is a nontrivial zero-divisor and $\gcd(g^k - 1, N)$ factors $N$.
+**Remark.** The content of the lemma is not tautological: it identifies the *effectively CRT-separating* condition as the right hypothesis, and rules out two spurious strengthenings — (a) that every isomorphism witness is CRT-separating (false: CRT-symmetric witnesses are not), and (b) that the construction needs to proceed through Babai (false: the idempotent is extracted before isomorphism is needed). More concretely: if $w$ contains an element $g \in G$ whose order divides $\lvert F(\mathbb{F}_p)\rvert$ but not $\lvert F(\mathbb{F}_q)\rvert$, set $k = \lvert F(\mathbb{F}_p)\rvert$. Then $g^k \equiv 1 \pmod{p}$ and $g^k \not\equiv 1 \pmod{q}$, so $g^k - 1$ is a nontrivial zero-divisor and $\gcd(g^k - 1, N)$ factors $N$.
 
 ### Theorem 4.2 — CRT-Wall for product-functorial Babai encodings
 

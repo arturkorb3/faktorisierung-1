@@ -37,7 +37,7 @@ A common source of confusion is the conflation of three distinct computational p
 
 (ii) $\mathrm{REG}_{\mathrm{unit}}$: a compact representation of $\varepsilon_D$ (e.g. as a continued fraction). This is strictly harder than numerical approximation.
 
-(iii) $\mathrm{Pell}$: the exact integer pair $(t_D, u_D)$. Recovering $x = \cosh R_D = t_D/2$ from a numerical approximation $\hat R_D$ with error $\delta$ induces $|\Delta x| \approx e^{R_D} \cdot \delta$. To recover $x \bmod N$ exactly requires $\delta \lesssim e^{-R_D}$: exponential precision, exponentially expensive for large regulators. Hence $\mathrm{REG}_{\mathrm{num}}$ is strictly weaker than $\mathrm{Pell}$. $\square$
+(iii) $\mathrm{Pell}$: the exact integer pair $(t_D, u_D)$. Recovering $x = \cosh R_D = t_D/2$ from a numerical approximation $\hat R_D$ with error $\delta$ induces $\lvert\Delta x\rvert \approx e^{R_D} \cdot \delta$. To recover $x \bmod N$ exactly requires $\delta \lesssim e^{-R_D}$: exponential precision, exponentially expensive for large regulators. Hence $\mathrm{REG}_{\mathrm{num}}$ is strictly weaker than $\mathrm{Pell}$. $\square$
 
 ---
 
