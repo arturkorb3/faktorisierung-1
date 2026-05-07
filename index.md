@@ -43,4 +43,18 @@ Proves that semiprime factorization cannot be encoded as a small product-functor
 
 ---
 
+## Authorship and Responsibility
+
+These notes are published by the repository owner as the human orchestrator and curator of the project. Because the work was substantially AI-assisted and has not undergone independent expert verification, no claim is made that the results have the same status as peer-reviewed mathematical research. Corrections, objections, and independent verification are welcome.
+
+## Citation
+
+If referring to this repository, please cite it as an AI-assisted exploratory research project rather than as a conventional peer-reviewed publication.
+
+Suggested informal citation:
+
+> Faktorisierung 1: AI-assisted exploratory research notes on CRT barriers in classical factorization, public GitHub repository, 2026.
+
+## License
+
 Released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
