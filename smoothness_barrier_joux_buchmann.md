@@ -8,13 +8,13 @@
 
 The Number Field Sieve achieves $L_N[1/3]$ for integer factoring. In 2013, Joux and independently Barbulescu–Gaudry–Joux–Thomé showed that discrete logarithms in $\mathbb{F}_{p^n}$ for small characteristic $p$ can be solved in quasi-polynomial time $L[1/4 + o(1)]$ [Joux 2013, BGJT 2014]. The key ingredients — Frobenius symmetry, polynomial smoothness, and recursive tower descent — collectively break the $L[1/2]$ barrier.
 
-The real quadratic regulator $R_K$ of $K = \mathbb{Q}(\sqrt{D})$ governs the fundamental unit $\varepsilon_D$ and the period of the continued fraction expansion of $\sqrt{D}$. For $D = N = pq$, factoring and regulator computation are empirically and conjecturally tightly linked (the BPW bridge; see companion Paper B). If the regulator could be computed sub-$L[1/2]$, this would likely give a sub-NFS factoring algorithm.
+The real quadratic regulator $R_K$ of $K = \mathbb{Q}(\sqrt{D})$ governs the fundamental unit $\varepsilon_D$ and the period of the continued fraction expansion of $\sqrt{D}$. For $D = N = pq$, factoring and regulator computation are empirically and conjecturally tightly linked (the BPW bridge; see companion Paper B). If the regulator could be computed in time below $L[1/2]$, this would likely give a sub-NFS factoring algorithm.
 
 This paper asks: *Can the Joux/BGJT approach transfer to real quadratic regulators?*
 
-The answer is no. We identify the five structural components of the Joux method (§2), analyze their transfer (§3), and prove two barrier theorems (§4–5). The analysis is conducted as a pipeline ("gate test"), and Gate IV — the test for an actual sub-$L[1/2]$ mechanism — fails hard.
+The answer is no. We identify the five structural components of the Joux method (§2), analyze their transfer (§3), and prove two barrier theorems (§4–5). The analysis is conducted as a pipeline ("gate test"), and Gate IV — the test for any mechanism below $L[1/2]$ — fails hard.
 
-**Limits of claims.** This paper does not prove that no classical algorithm factors $N$ in sub-$L[1/3]$ time. It proves that *this specific class of approaches* — smooth-relation regulator algorithms and infrastructure period-finding — cannot break $L[1/2]$ within the stated models. Theorem 2 is model-relative; it does not exclude non-black-box algorithms exploiting specific arithmetic properties outside the generic infrastructure model.
+**Limits of claims.** This paper does not prove that no classical algorithm factors $N$ in time below $L[1/3]$. It proves that *this specific class of approaches* — smooth-relation regulator algorithms and infrastructure period-finding — cannot break $L[1/2]$ within the stated models. Theorem 2 is model-relative; it does not exclude non-black-box algorithms exploiting specific arithmetic properties outside the generic infrastructure model.
 
 **Standing assumptions.** The Dickman–CEP smoothness heuristic is used for Theorem 1; it is unproven but standard. Theorem 2 holds unconditionally in the generic infrastructure model. GRH is not needed for the main barrier results.
 

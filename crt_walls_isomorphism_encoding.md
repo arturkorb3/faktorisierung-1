@@ -20,7 +20,7 @@ The natural candidates are algebraic constructions over $R = \mathbb{Z}/N\mathbb
 
 This negative result is sharp. We exhibit a family $\mathcal{S}_d$ of singular matrix spaces with publicly verifiable local rank asymmetry between $\mathbb{F}_p$ and $\mathbb{F}_q$, without any coefficient being a zero-divisor modulo $N$. This shows the strong wall ("existence implies factoring") is false. The weak wall ("witness implies factoring") is true and tight: extracting a concrete rank-1 element of $\mathcal{S}_d$ is equivalent to producing a QR-witness for $d$ modulo $N$, which is polynomial-time interreducible with factoring.
 
-**Limits of claims.** This paper does not prove that no sub-$L[1/3]$ classical factoring algorithm exists, nor that factoring is hard in any complexity-theoretic sense. It proves that a specific class of Babai-encoding approaches — product-functorial ones — cannot avoid the CRT wall. The "factoring-equivalent" claims are under standard randomized polynomial-time reductions and concern QR-*witness* extraction, not QR-*decision* (which is easy via the Jacobi symbol).
+**Limits of claims.** This paper does not prove that no classical factoring algorithm below $L[1/3]$ exists, nor that factoring is hard in any complexity-theoretic sense. It proves that a specific class of Babai-encoding approaches — product-functorial ones — cannot avoid the CRT wall. The "factoring-equivalent" claims are under standard randomized polynomial-time reductions and concern QR-*witness* extraction, not QR-*decision* (which is easy via the Jacobi symbol).
 
 ### Organization
 
@@ -131,7 +131,7 @@ Then the same CRT dichotomy applies: the output is either CRT-symmetric, or it g
 
 Not every idempotent in $\mathrm{Adj}(\mathcal{M})$ factors $N$. A matrix idempotent such as
 
-$$E = \begin{pmatrix}1&0\\0&0\end{pmatrix} \in \mathrm{Mat}_2(\mathbb{F}_p)$$
+$$E = \begin{pmatrix}1 & 0 \cr 0 & 0\end{pmatrix} \in \mathrm{Mat}_2(\mathbb{F}_p)$$
 
 is a nontrivial projector but carries no CRT information about $p$ vs. $q$. Factorization follows only from a *central scalar* idempotent $eI$ with $e \in Z(R)$, $e^2 \equiv e \pmod{N}$, $e \notin \{0,1\}$.
 
