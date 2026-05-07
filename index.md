@@ -11,7 +11,7 @@ Three independent barrier results for classical integer factorization of RSA sem
 
 ## Paper A — Smoothness Barrier: Joux–Buchmann Bridge
 
-[Full text](smoothness_barrier_joux_buchmann) · [PDF](smoothness_barrier_joux_buchmann.pdf)
+[Full text](smoothness-barrier/) · [PDF](smoothness_barrier_joux_buchmann.pdf)
 
 Analyzes whether the Joux/BGJT quasi-polynomial strategy for discrete logarithms in small-characteristic fields transfers to real quadratic regulators. Proves two barriers: the smooth-relation barrier is $L_D[1/2]$ (Theorem 1), and infrastructure period-finding requires $\Omega(\sqrt{R_K})$ oracle queries (Theorem 2). Gate IV of the Joux pipeline fails.
 
@@ -19,7 +19,7 @@ Analyzes whether the Joux/BGJT quasi-polynomial strategy for discrete logarithms
 
 ## Paper B — Compression Barrier: Pell Trace
 
-[Full text](pell_trace_compression_barrier) · [PDF](pell_trace_compression_barrier.pdf)
+[Full text](pell-trace-barrier/) · [PDF](pell_trace_compression_barrier.pdf)
 
 Analyzes the regulator–factorization bridge via Pell trace residues $t_{mN} \bmod N$. Proves that computing the trace nontrivially is factoring-equivalent (Lemma 5.1). Classifies four natural routes (representation-theoretic, Kloosterman, multilevel, ray-class), each collapsing to the same CRT wall. States the OP4/H3 compression barrier conjecture.
 
@@ -27,7 +27,7 @@ Analyzes the regulator–factorization bridge via Pell trace residues $t_{mN} \b
 
 ## Paper C — CRT Walls: Product-Functorial Isomorphism Encodings
 
-[Full text](crt_walls_isomorphism_encoding) · [PDF](crt_walls_isomorphism_encoding.pdf)
+[Full text](crt-walls/) · [PDF](crt_walls_isomorphism_encoding.pdf)
 
 Proves that semiprime factorization cannot be encoded as a small product-functorial group or matrix-space isomorphism problem suitable for Babai's quasi-polynomial algorithm. Establishes a dichotomy: every such encoding is either CRT-symmetric or already generates a factoring certificate. Studies the genuine boundary in singular matrix spaces.
 
