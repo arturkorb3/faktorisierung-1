@@ -22,7 +22,9 @@ The main finding is that the equivalence, to the extent it holds, is mediated by
 
 A common source of confusion is the conflation of three distinct computational problems:
 
-**Proposition 2.1 (Precision trap).** $\mathrm{REG}_{\mathrm{num}} \not\equiv \mathrm{REG}_{\mathrm{unit}} \not\equiv \mathrm{Pell}$ as computational problems.
+**Proposition 2.1 (Precision trap).** The three problems are strictly inequivalent:
+
+$$\mathrm{REG}_{\mathrm{num}} \not\equiv \mathrm{REG}_{\mathrm{unit}} \not\equiv \mathrm{Pell}.$$
 
 *Proof.* (i) $\mathrm{REG}_{\mathrm{num}}$: a numerical approximation to $R_D$ with $\mathrm{poly}(\log D)$ bits. Extracting the class number $h$ from $hR$ requires error $< 1/(2h)$, polynomially many bits. This step is not the bottleneck.
 
