@@ -70,7 +70,7 @@ Setting $D = N$ (or $D = 4N$ for $N \equiv 3 \pmod 4$), the reduced ambiguous fo
 
 **Proposition 6.1.** *The following statement is false: "A recognizer $\Pi_0$ for nontrivial square roots of $1$ modulo $N$ is factoring-equivalent."*
 
-*Proof.* The recognizer $\Pi_0(x) = [x^2 \equiv 1 \bmod N$ and $x \not\equiv \pm 1 \bmod N]$ is trivially implementable: compute $x^2 \bmod N$ and compare with $1, N-1$. This requires no knowledge of $p, q$ and takes $O((\log N)^2)$ time. Hence $\Pi_0$ is not factoring-equivalent. $\square$
+*Proof.* The recognizer $\Pi_0(x) = [x^2 \equiv 1 \bmod N \text{ and } x \not\equiv \pm 1 \bmod N]$ is trivially implementable: compute $x^2 \bmod N$ and compare with $1, N-1$. This requires no knowledge of $p, q$ and takes $O((\log N)^2)$ time. Hence $\Pi_0$ is not factoring-equivalent. $\square$
 
 The correct factoring-equivalent statement is: *generating* $x$ with $\Pi_0(x) = 1$, i.e., producing a nontrivial square root of $1$. The predicate tests membership; the generator solves OP4/H3.
 
