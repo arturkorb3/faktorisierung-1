@@ -105,10 +105,10 @@ Any classical algorithm that computes, for enough small multipliers $m$, a trace
 
 1. compute a compact representation of $\varepsilon_{mN}$;
 2. solve PIP or an infrastructure-distance problem;
-3. process effective level-$N$ congruence data of size $N^{1-o(1)}$;
+3. process effective congruence data at level $N$ of size $N^{1-o(1)}$;
 4. construct a nontrivial CRT idempotent in $\mathbb{Z}/N\mathbb{Z}$.
 
-If true, this closes OP4/H3 negatively. If false, any counterexample computing nontrivial trace residues yields, by Lemma 5.1, a factoring algorithm of the same asymptotic complexity. If that complexity is sub-$L_N[1/3]$ or better, it is an NFS-beating factoring breakthrough.
+If true, this closes OP4/H3 negatively. If false, any counterexample computing nontrivial trace residues yields, by Lemma 5.1, a factoring algorithm of the same asymptotic complexity. If that complexity is $L_N[1/3]$ or better, it is an NFS-beating factoring breakthrough.
 
 **Remark.** This is stated as a conjecture. The four algorithm classes $\mathcal{C}_1, \ldots, \mathcal{C}_4$ corresponding to the four routes are formally defined by their oracle access and output requirements. The claim that they exhaust the space of efficient algorithms is the conjecture's substance; this is not established.
 
@@ -132,7 +132,7 @@ The Hallgren comparison therefore strengthens, not weakens, the OP4 barrier: it 
 
 The regulator–factorization complexity bridge has a precise shape:
 
-- $\mathrm{REG}_{\mathrm{num}} \lt \mathrm{REG}_{\mathrm{unit}} \approx \mathrm{Pell}$ in difficulty.
+- Difficulty ordering: $\mathrm{REG}_{\mathrm{num}} \lt \mathrm{REG}_{\mathrm{unit}} \approx \mathrm{Pell}$.
 - Generating $t_{mN} \bmod N$ nontrivially $\equiv$ factoring (Lemma 5.1).
 - All four natural routes to the trace residue collapse to the CRT wall.
 - The predicate-only version of OP4 is false; only the generator version is factoring-equivalent.
