@@ -40,7 +40,7 @@ $$
 R \cong \mathbb{F}_p \times \mathbb{F}_q.
 $$
 
-The two projections $\pi_p: R \to \mathbb{F}_p$ and $\pi_q: R \to \mathbb{F}_q$ are the *CRT components*. An element $a \in R$ is a *nontrivial zero-divisor* if $a \neq 0$ and $a$ is not a unit; equivalently, $\pi_p(a) = 0$ or $\pi_q(a) = 0$ but not both. Such elements satisfy $1 < \gcd(a, N) < N$.
+The two projections $\pi_p: R \to \mathbb{F}_p$ and $\pi_q: R \to \mathbb{F}_q$ are the *CRT components*. An element $a \in R$ is a *nontrivial zero-divisor* if $a \neq 0$ and $a$ is not a unit; equivalently, $\pi_p(a) = 0$ or $\pi_q(a) = 0$ but not both. Such elements satisfy $1 \lt \gcd(a, N) \lt N$.
 
 ### 2.2 Idempotent–Factor Lemma
 
@@ -147,7 +147,7 @@ This creates a narrow residual gap: a non-central idempotent in $\mathrm{Adj}(\m
 
 **Theorem 7.1 — Constructive witness wall.** Let $\mathcal{M} \leq \mathrm{Mat}_m(R)$ be publicly given. If an algorithm outputs a concrete matrix $M \in \mathcal{M}$ with $\mathrm{rank}_p(M_p) \neq \mathrm{rank}_q(M_q)$, or equivalently (after computing minors) a minor $\Delta$ with $\Delta \equiv 0 \pmod{p}$, $\Delta \not\equiv 0 \pmod{q}$, then $\gcd(\Delta, N)$ is a nontrivial factor.
 
-*Proof.* If $\mathrm{rank}(M_p) < \mathrm{rank}(M_q)$, there exists a $(k+1)$-minor of $M_p$ that vanishes while the corresponding minor of $M_q$ does not. Its lift $\Delta \in R$ satisfies $\Delta \equiv 0 \pmod{p}$, $\Delta \not\equiv 0 \pmod{q}$, giving $1 < \gcd(\Delta, N) < N$. $\square$
+*Proof.* If $\mathrm{rank}(M_p) \lt \mathrm{rank}(M_q)$, there exists a $(k+1)$-minor of $M_p$ that vanishes while the corresponding minor of $M_q$ does not. Its lift $\Delta \in R$ satisfies $\Delta \equiv 0 \pmod{p}$, $\Delta \not\equiv 0 \pmod{q}$, giving $1 \lt \gcd(\Delta, N) \lt N$. $\square$
 
 ### 7.2 The strong wall is false — counterexample $\mathcal{S}_d$
 
