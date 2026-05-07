@@ -1,3 +1,10 @@
+---
+title: "CRT Walls: Isomorphism Encoding"
+layout: default
+permalink: /crt-walls/
+description: "CRT-wall dichotomy for product-functorial encodings of semiprime factorization and the singular matrix space boundary."
+---
+
 # CRT Walls for Product-Functorial Isomorphism Encodings of Semiprime Factorization
 
 **Abstract.** We investigate whether integer factorization of an RSA semiprime $N = pq$ can be encoded as a small group or matrix-space isomorphism problem solvable by Babai's quasi-polynomial algorithm. The encoding would need to have size $\mathrm{poly}(\log N)$ and to recover $p, q$ from an isomorphism witness. We prove that this is impossible via product-functorial algebraic encodings: any such encoding either remains CRT-symmetric (carrying no $p/q$-distinguishing information) or already generates a factoring certificate before the isomorphism algorithm applies. We extend this to matrix-space invariants (adjoint algebra, centroid, radical) and to singular matrix spaces. The singular case exhibits a genuine boundary: publicly constructible singular matrix spaces can have locally asymmetric rank structure without containing an immediate factoring witness (Theorem 16.2, counterexample $\mathcal{S}_d$). However, any constructive witness for the asymmetry is polynomial-time equivalent to QR-witness extraction, which is factoring-equivalent under standard reductions (Theorem 16.3). The conclusion is a dichotomy: *no small explicit Babai encoding factors $N$, and the only remaining route — forced singular witness extraction — is equivalent to the known hardness of quadratic residuosity witness computation*.

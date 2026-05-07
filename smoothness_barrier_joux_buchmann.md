@@ -1,3 +1,10 @@
+---
+title: "Smoothness Barrier: Joux–Buchmann Bridge"
+layout: default
+permalink: /smoothness-barrier/
+description: "Fixed-degree smoothness and infrastructure period-finding barriers for real quadratic regulators."
+---
+
 # Fixed-Degree Smoothness Barriers for Real Quadratic Infrastructure and the Joux–Buchmann Bridge
 
 **Abstract.** The Joux/BGJT algorithm achieves quasi-polynomial complexity for discrete logarithms in small-characteristic function fields by exploiting Frobenius symmetry, tower descent, and polynomial-basis smoothness. We investigate whether a structural analogue exists for the real quadratic regulator of $K = \mathbb{Q}(\sqrt{N})$, which would yield a faster classical algorithm for computing $R_K$ and hence for factoring RSA semiprimes $N = pq$. We prove two barriers. First (Theorem 1), in the class of Buchmann-style smooth-relation algorithms for fixed real quadratic degree, the heuristic relation-collection barrier is $L_D[1/2]$, conditional only on the standard smoothness heuristic and even relative to an integer factoring oracle. Second (Theorem 2), in the generic infrastructure model, finding the infrastructure period requires $\Omega(\sqrt{R_K})$ oracle queries. The Joux pipeline analysis shows Gate IV failure: no Frobenius analogue, no tower descent, and no mechanism below $L[1/2]$ exists in degree 2. The conclusion is a precise corollary: any Joux-style improvement would require either a Frobenius analogue not known to exist, or a semiprime-specific prefix-to-period law for continued fractions of $\sqrt{pq}$.

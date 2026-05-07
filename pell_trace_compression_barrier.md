@@ -1,3 +1,10 @@
+---
+title: "Pell Trace Compression Barrier"
+layout: default
+permalink: /pell-trace-barrier/
+description: "Regulator–factorization bridge via Pell congruence trace residues and the OP4/H3 compression conjecture."
+---
+
 # Compression Barriers for the Pell Congruence Trace: Closing the Regulator–Factorization Bridge
 
 **Abstract.** We analyze the complexity relationship between integer factorization of RSA semiprimes $N = pq$ and computation of the real quadratic regulator $R_K$ for $K = \mathbb{Q}(\sqrt{mN})$. The central objects are the Pell fundamental solution $(t_D, u_D)$ and the congruence trace residue $t_{mN} \bmod N$. We prove (Lemma 5.1) that any algorithm computing $t_{mN} \bmod N$ nontrivially is a factoring algorithm with the same asymptotic complexity. We classify four natural routes to computing this residue (representation-theoretic, Kloosterman, multilevel, ray-class), each collapsing to the same CRT wall. The OP4/H3 Congruence Trace Compression problem is identified as the single remaining open problem and stated as a compression barrier conjecture (Conjectural Theorem 8.1). We also prove that the "predicate-only" version of OP4 is false: a recognizer for nontrivial square roots of $1$ modulo $N$ is trivially constructible and does not imply factoring. Only a *generator* of nontrivial trace residues is factoring-equivalent. The Hallgren quantum–classical gap is analyzed to clarify why no classical shortcut to the trace residue is known.

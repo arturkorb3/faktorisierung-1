@@ -1,0 +1,21 @@
+title: "Classical Factorization Barriers"
+description: >-
+  Three barrier manuscripts on classical integer factorization of RSA semiprimes:
+  Joux–Buchmann smoothness, Pell trace compression, and CRT walls.
+baseurl: "/faktorisierung-1"
+url: "https://arturkorb3.github.io"
+
+theme: minima
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+header_pages:
+  - smoothness_barrier_joux_buchmann.md
+  - pell_trace_compression_barrier.md
+  - crt_walls_isomorphism_encoding.md
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
