@@ -71,7 +71,7 @@ $$
 
 beating $L_N[1/3]$.
 
-**Definition 3.2 (Product-functorial encoding).** An encoding $F$ is product-functorial if $F(A \times B) \cong F(A) \times F(B)$ canonically. Typical examples: $R \mapsto R^\ast$, $R \mapsto R^\ast/(R^\ast)^k$, $R \mapsto E[\ell](R)$ for elliptic $E$, Cayley graphs on functorially defined generators.
+**Definition 3.2 (Product-functorial encoding).** An encoding $F$ is product-functorial if $F(A \times B) \cong F(A) \times F(B)$ canonically. Typical examples: $R \mapsto R^\ast$, $R \mapsto R^\ast/(R^\ast)^k$, $R \mapsto E\lbrack\ell\rbrack(R)$ for elliptic $E$, Cayley graphs on functorially defined generators.
 
 **Definition 3.3 (Effectively CRT-separating witness).** A witness $w$ output by an algorithm on input $N$ is *effectively CRT-separating* if it enables the computation, in polynomial time, of a nontrivial idempotent or ring projector $e \in R$ with $e \neq 0, 1$.
 
@@ -91,9 +91,9 @@ Let $F$ be a product-functorial encoding with $F(R) \cong F(\mathbb{F}_p) \times
 
 Let $F$ be a product-functorial algebraic encoding and $N = pq$ squarefree. Suppose a Babai-compatible GI instance $I(N)$ of size $\mathrm{poly}(\log N)$ is constructed from $F(R)$. Then:
 
-1. *(Symmetric case.) If the construction is invariant under swapping the two CRT components, every canonically computable isomorphism witness carries at most Jacobi-type symmetric information and cannot separate $p$ and $q$.*
+1. (Symmetric case.) If the construction is invariant under swapping the two CRT components, every canonically computable isomorphism witness carries at most Jacobi-type symmetric information and cannot separate $p$ and $q$.
 
-2. *(Separating case.) If the construction or extracted isomorphism witness is effectively CRT-separating, it generates a nontrivial CRT projector, which by Lemma 4.1 immediately yields a factor of $N$.*
+2. (Separating case.) If the construction or extracted isomorphism witness is effectively CRT-separating, it generates a nontrivial CRT projector, which by Lemma 4.1 immediately yields a factor of $N$.
 
 In particular, Babai's algorithm cannot serve as the "missing last step": either the construction is factorization-blind, or it has already factored $N$ before the isomorphism step.
 
@@ -109,7 +109,7 @@ We apply Theorem 4.2 to the natural algebraic candidates.
 
 **Nontrivial square roots of $1$ in $R$.** A perfect extraction mechanism: $\xi^2 \equiv 1$, $\xi \not\equiv \pm 1$ gives $\gcd(\xi - 1, N)$. But constructing such $\xi$ is factoring-equivalent. *Closed.*
 
-**Elliptic $\ell$-torsion $E[\ell](R)$.** By Hensel lifting, $E[\ell](R) \cong E[\ell](\mathbb{F}_p) \times E[\ell](\mathbb{F}_q)$. Product-functorial; separated Frobenius data require CRT. *Closed.*
+**Elliptic $\ell$-torsion $E\lbrack\ell\rbrack(R)$.** By Hensel lifting, $E\lbrack\ell\rbrack(R) \cong E\lbrack\ell\rbrack(\mathbb{F}_p) \times E\lbrack\ell\rbrack(\mathbb{F}_q)$. Product-functorial; separated Frobenius data require CRT. *Closed.*
 
 **Galois groups of $N$-dependent polynomials (e.g. $x^m - N$).** These detect Kummer/root structure of $N$ as a single integer, not the factorization $N = pq$: the group $\mathrm{Gal}(\mathbb{Q}(\zeta_m, N^{1/m})/\mathbb{Q})$ depends only on $m$ and $N$, not on $p$ and $q$ individually. *Closed.*
 
@@ -145,7 +145,7 @@ This creates a narrow residual gap: a non-central idempotent in $\mathrm{Adj}(\m
 
 ### 7.1 Constructive witness wall (Theorem 16.1)
 
-**Theorem 7.1 — Constructive witness wall.** Let $\mathcal{M} \leq \mathrm{Mat}_m(R)$ be publicly given. If an algorithm outputs a concrete matrix $M \in \mathcal{M}$ with $\mathrm{rank}_{\mathbb{F}_p}(M_p) \neq \mathrm{rank}_{\mathbb{F}_q}(M_q)$, or equivalently (after computing minors) a minor $\Delta$ with $\Delta \equiv 0 \pmod{p}$, $\Delta \not\equiv 0 \pmod{q}$, then $\gcd(\Delta, N)$ is a nontrivial factor.
+**Theorem 7.1 — Constructive witness wall.** Let $\mathcal{M} \leq \mathrm{Mat}_m(R)$ be publicly given. If an algorithm outputs a concrete matrix $M \in \mathcal{M}$ with $\mathrm{rank}_p(M_p) \neq \mathrm{rank}_q(M_q)$, or equivalently (after computing minors) a minor $\Delta$ with $\Delta \equiv 0 \pmod{p}$, $\Delta \not\equiv 0 \pmod{q}$, then $\gcd(\Delta, N)$ is a nontrivial factor.
 
 *Proof.* If $\mathrm{rank}(M_p) < \mathrm{rank}(M_q)$, there exists a $(k+1)$-minor of $M_p$ that vanishes while the corresponding minor of $M_q$ does not. Its lift $\Delta \in R$ satisfies $\Delta \equiv 0 \pmod{p}$, $\Delta \not\equiv 0 \pmod{q}$, giving $1 < \gcd(\Delta, N) < N$. $\square$
 
