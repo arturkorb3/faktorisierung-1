@@ -9,7 +9,17 @@ Three independent barrier results for classical integer factorization of RSA sem
 
 ---
 
-## Paper A — Smoothness Barrier: Joux–Buchmann Bridge
+## Status and Transparency
+
+These documents are public research notes / exploratory manuscript drafts. They are **not peer-reviewed journal publications**. They should be read as structured mathematical investigations and proposed barrier formulations, not as established theorems accepted by the research community. Some statements are explicitly model-relative or conjectural.
+
+**This project was developed through extended iterative dialogue with large language model systems, primarily Anthropic Claude and OpenAI ChatGPT.** The repository owner acted as human orchestrator: setting the research direction, proposing and refining the problem framing, steering the investigation, and curating the resulting manuscripts. The mathematical content — theorem statements, proof sketches, counterexamples, barrier formulations, and manuscript language — was generated and refined through this human–AI collaboration. The AI systems are not listed as authors; they are tools used in the production of these notes.
+
+**Readers should independently verify all mathematical claims before citing or relying on them.** Corrections, objections, and independent verification are welcome.
+
+---
+
+## Paper A— Smoothness Barrier: Joux–Buchmann Bridge
 
 [Full text](smoothness-barrier/) · [PDF](smoothness_barrier_joux_buchmann.pdf)
 
@@ -33,7 +43,4 @@ Proves that semiprime factorization cannot be encoded as a small product-functor
 
 ---
 
-## Status
-
-Exploratory research notes developed through human–AI collaboration. Not peer-reviewed.  
 Released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
