@@ -44,7 +44,7 @@ The two projections $\pi_p: R \to \mathbb{F}_p$ and $\pi_q: R \to \mathbb{F}_q$ 
 
 ### 2.2 Idempotent–Factor Lemma
 
-**Lemma (Idempotent–Factor).** *Let $e \in R$ with $e^2 \equiv e \pmod{N}$ and $e \not\equiv 0, 1 \pmod{N}$. Then $\gcd(e, N)$ or $\gcd(e-1, N)$ is a nontrivial factor of $N$.*
+**Lemma (Idempotent–Factor).** Let $e \in R$ with $e^2 \equiv e \pmod{N}$ and $e \not\equiv 0, 1 \pmod{N}$. Then $\gcd(e, N)$ or $\gcd(e-1, N)$ is a nontrivial factor of $N$.
 
 *Proof.* Under CRT, idempotents in $\mathbb{F}_p \times \mathbb{F}_q$ are componentwise $0$ or $1$. The only nontrivial idempotents are $(1,0)$ and $(0,1)$, divisible by exactly one of $p, q$. $\square$
 
@@ -121,7 +121,7 @@ We apply Theorem 4.2 to the natural algebraic candidates.
 
 The Hidden Product Matrix-space Isometry (HPMI) problem asks whether factorization can be encoded in a singular matrix space $\mathcal{M} \leq \mathrm{Mat}_m(R)$ that admits a natural isometry decomposition exploiting local rank asymmetry.
 
-**Theorem 6.1 — Extension to matrix-space invariants.** *Let $\mathcal{M}$ be a matrix space over $R$ and let $\Phi(\mathcal{M})$ be a product-compatible algebraic invariant (adjoint algebra, centroid, endomorphism ring, radical, determinantal ideals):*
+**Theorem 6.1 — Extension to matrix-space invariants.** Let $\mathcal{M}$ be a matrix space over $R$ and let $\Phi(\mathcal{M})$ be a product-compatible algebraic invariant (adjoint algebra, centroid, endomorphism ring, radical, determinantal ideals):
 
 $$\Phi(\mathcal{M}_R) \cong \Phi(\mathcal{M}_p) \times \Phi(\mathcal{M}_q).$$
 
@@ -145,13 +145,13 @@ This creates a narrow residual gap: a non-central idempotent in $\mathrm{Adj}(\m
 
 ### 7.1 Constructive witness wall (Theorem 16.1)
 
-**Theorem 7.1 — Constructive witness wall.** *Let $\mathcal{M} \leq \mathrm{Mat}_m(R)$ be publicly given. If an algorithm outputs a concrete matrix $M \in \mathcal{M}$ with $\mathrm{rank}_{\mathbb{F}_p}(M_p) \neq \mathrm{rank}_{\mathbb{F}_q}(M_q)$, or equivalently (after computing minors) a minor $\Delta$ with $\Delta \equiv 0 \pmod{p}$, $\Delta \not\equiv 0 \pmod{q}$, then $\gcd(\Delta, N)$ is a nontrivial factor.*
+**Theorem 7.1 — Constructive witness wall.** Let $\mathcal{M} \leq \mathrm{Mat}_m(R)$ be publicly given. If an algorithm outputs a concrete matrix $M \in \mathcal{M}$ with $\mathrm{rank}_{\mathbb{F}_p}(M_p) \neq \mathrm{rank}_{\mathbb{F}_q}(M_q)$, or equivalently (after computing minors) a minor $\Delta$ with $\Delta \equiv 0 \pmod{p}$, $\Delta \not\equiv 0 \pmod{q}$, then $\gcd(\Delta, N)$ is a nontrivial factor.
 
 *Proof.* If $\mathrm{rank}(M_p) < \mathrm{rank}(M_q)$, there exists a $(k+1)$-minor of $M_p$ that vanishes while the corresponding minor of $M_q$ does not. Its lift $\Delta \in R$ satisfies $\Delta \equiv 0 \pmod{p}$, $\Delta \not\equiv 0 \pmod{q}$, giving $1 < \gcd(\Delta, N) < N$. $\square$
 
 ### 7.2 The strong wall is false — counterexample $\mathcal{S}_d$
 
-**Theorem 7.2 — Strong wall is false.** *The statement "every publicly constructible locally asymmetric singular matrix space already contains a factoring witness" is false.*
+**Theorem 7.2 — Strong wall is false.** The statement "every publicly constructible locally asymmetric singular matrix space already contains a factoring witness" is false.
 
 **Counterexample.** Choose public $d \in R^\ast$ with Jacobi symbol $\bigl(\frac{d}{N}\bigr) = -1$, computable in polynomial time without factorization. This forces $\bigl(\frac{d}{p}\bigr) \neq \bigl(\frac{d}{q}\bigr)$. Define
 
@@ -159,11 +159,15 @@ $$
 \mathcal{S}_d = \bigl\lbrace \begin{pmatrix} x & dy & 0 \\ y & x & 0 \\ 0 & 0 & 0 \end{pmatrix} : x, y \in R \bigr\rbrace \subseteq \mathrm{Mat}_3(R).
 $$
 
-Every element is singular. The $2 \times 2$ upper block has determinant $x^2 - dy^2$. Over $\mathbb{F}_r$, a nonzero rank-1 element exists iff $d$ is a quadratic residue mod $r$. Therefore $\mathrm{minrank}_{\mathbb{F}_p}(\mathcal{S}_d) \neq \mathrm{minrank}_{\mathbb{F}_q}(\mathcal{S}_d)$, yet no coefficient in the definition of $\mathcal{S}_d$ is a nontrivial zero-divisor modulo $N$. Local rank asymmetry exists publicly without an immediate factor. $\square$
+Every element is singular. The $2 \times 2$ upper block has determinant $x^2 - dy^2$. Over $\mathbb{F}_r$, a nonzero rank-1 element exists iff $d$ is a quadratic residue mod $r$. Therefore
+
+$$\mathrm{minrank}_{\mathbb{F}_p}(\mathcal{S}_d) \neq \mathrm{minrank}_{\mathbb{F}_q}(\mathcal{S}_d),$$
+
+yet no coefficient in the definition of $\mathcal{S}_d$ is a nontrivial zero-divisor modulo $N$. Local rank asymmetry exists publicly without an immediate factor. $\square$
 
 ### 7.3 The singular matrixspace boundary (Theorem 16.3)
 
-**Theorem 7.3 — Singular Matrixspace Boundary.** *There exist publicly constructible singular matrix spaces over $R$ whose local low-rank structure is asymmetric at $p$ and $q$. This existence information does not immediately factor $N$. However, any constructive witness for the asymmetry — a rank-reducing matrix, minor, or pivot — generates a nontrivial zero-divisor and factors $N$ via gcd. In the minimal family $\mathcal{S}_d$, the gap between existence and construction is equivalent to QR-Witness extraction for $d$ modulo the prime factors of $N$ (not QR-Decision; see §8). More general singular matrix spaces may encode stronger or different witness problems, but no natural construction outside this witness paradigm is found in this work.*
+**Theorem 7.3 — Singular Matrixspace Boundary.** There exist publicly constructible singular matrix spaces over $R$ whose local low-rank structure is asymmetric at $p$ and $q$. This existence information does not immediately factor $N$. However, any constructive witness for the asymmetry — a rank-reducing matrix, minor, or pivot — generates a nontrivial zero-divisor and factors $N$ via gcd. In the minimal family $\mathcal{S}_d$, the gap between existence and construction is equivalent to QR-Witness extraction for $d$ modulo the prime factors of $N$ (not QR-Decision; see §8). More general singular matrix spaces may encode stronger or different witness problems, but no natural construction outside this witness paradigm is found in this work.
 
 ---
 
