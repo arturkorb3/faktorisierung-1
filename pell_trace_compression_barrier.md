@@ -36,7 +36,7 @@ A common source of confusion is the conflation of three distinct computational p
 
 ### Lemma 3.1 — Pell implies factoring
 
-*If $(t_D, u_D)$ is the primitive solution of $t^2 - Du^2 = 4$ and $N \mid D$, then $t_D^2 \equiv 4 \pmod{N}$. If $t_D/2 \not\equiv \pm 1 \pmod{N}$, then $\gcd(t_D/2 - 1, N)$ is a nontrivial factor of $N$.*
+If $(t_D, u_D)$ is the primitive solution of $t^2 - Du^2 = 4$ and $N \mid D$, then $t_D^2 \equiv 4 \pmod{N}$. If $t_D/2 \not\equiv \pm 1 \pmod{N}$, then $\gcd(t_D/2 - 1, N)$ is a nontrivial factor of $N$.
 
 *Proof.* From the Pell equation, $t_D^2 = 4 + Du_D^2 \equiv 4 \pmod{N}$. So $(t_D/2)^2 \equiv 1 \pmod{N}$. If $t_D/2 \not\equiv \pm 1$, this is a nontrivial square root of $1$ in $\mathbb{Z}/N\mathbb{Z} \cong \mathbb{F}_p \times \mathbb{F}_q$: one component is $+1$ and the other $-1$, so $\gcd(t_D/2 - 1, N) \in \{p, q\}$. $\square$
 
@@ -58,7 +58,7 @@ Setting $D = N$ (or $D = 4N$ for $N \equiv 3 \pmod 4$), the reduced ambiguous fo
 
 ### Lemma 5.1 — Trace residue implies factoring
 
-*Let $A$ be an algorithm that, on input $(N, m)$, returns $T_m = t_{mN} \bmod N$ with $T_m/2 \not\equiv \pm 1 \pmod{N}$ with non-negligible probability. Then $A$ is a factoring algorithm with the same asymptotic complexity.*
+Let $A$ be an algorithm that, on input $(N, m)$, returns $T_m = t_{mN} \bmod N$ with $T_m/2 \not\equiv \pm 1 \pmod{N}$ with non-negligible probability. Then $A$ is a factoring algorithm with the same asymptotic complexity.
 
 *Proof.* Set $x_m = T_m \cdot 2^{-1} \bmod N$. Since the Pell equation gives $T_m^2 \equiv 4 \pmod{N}$, we have $x_m^2 \equiv 1 \pmod{N}$. If $x_m \not\equiv \pm 1$, then $\gcd(x_m - 1, N)$ is a nontrivial factor by Lemma 3.1. Non-negligible success probability gives the factoring reduction directly. $\square$
 
@@ -99,14 +99,14 @@ The open problem remaining after all closures:
 
 ### Conjectural Theorem 8.1 — OP4 Compression Barrier
 
-*Any classical algorithm that computes, for enough small multipliers $m$, a trace residue $t_{mN} \bmod N$ nontrivially with non-negligible probability must perform at least one of:*
+Any classical algorithm that computes, for enough small multipliers $m$, a trace residue $t_{mN} \bmod N$ nontrivially with non-negligible probability must perform at least one of:
 
 1. *compute a compact representation of $\varepsilon_{mN}$;*
 2. *solve PIP or an infrastructure-distance problem;*
 3. *process effective level-$N$ congruence data of size $N^{1-o(1)}$;*
 4. *construct a nontrivial CRT idempotent in $\mathbb{Z}/N\mathbb{Z}$.*
 
-*If true, this closes OP4/H3 negatively. If false, any counterexample computing nontrivial trace residues yields, by Lemma 5.1, a factoring algorithm of the same asymptotic complexity. If that complexity is sub-$L_N[1/3]$ or better, it is an NFS-beating factoring breakthrough.*
+If true, this closes OP4/H3 negatively. If false, any counterexample computing nontrivial trace residues yields, by Lemma 5.1, a factoring algorithm of the same asymptotic complexity. If that complexity is sub-$L_N[1/3]$ or better, it is an NFS-beating factoring breakthrough.
 
 **Remark.** This is stated as a conjecture. The four algorithm classes $\mathcal{C}_1, \ldots, \mathcal{C}_4$ corresponding to the four routes are formally defined by their oracle access and output requirements. The claim that they exhaust the space of efficient algorithms is the conjecture's substance; this is not established.
 

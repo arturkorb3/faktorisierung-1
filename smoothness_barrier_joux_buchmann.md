@@ -65,7 +65,7 @@ K3 and K4 are the heart of the $L[1/4]$ gain. Without them, the algorithm would 
 
 ### Theorem 1 — Fixed-degree norm-smoothness barrier
 
-*In the class of Buchmann-style regulator algorithms for fixed real quadratic degree, based on smooth principal-ideal relations, the optimal heuristic relation-collection complexity is $L_D[1/2, O(1)]$, even relative to an integer factoring oracle. The factoring oracle accelerates norm factorization but does not alter the probability that candidate norms are smooth. Hence the $L_D[1/2]$ bottleneck is structural, not arithmetic.*
+In the class of Buchmann-style regulator algorithms for fixed real quadratic degree, based on smooth principal-ideal relations, the optimal heuristic relation-collection complexity is $L_D[1/2, O(1)]$, even relative to an integer factoring oracle. The factoring oracle accelerates norm factorization but does not alter the probability that candidate norms are smooth. Hence the $L_D[1/2]$ bottleneck is structural, not arithmetic.
 
 **Proof sketch.** Set the factor base size $B = L_D[a, c]$ and let $X = D^{O(1)}$ be the size of candidate relation norms, so $\log X \asymp \log D$. The smoothness parameter is
 
@@ -81,7 +81,7 @@ A factoring oracle replaces the per-relation norm factorization step (cost $L_D[
 
 ### Theorem 2 — Infrastructure period barrier (generic model)
 
-*In the generic infrastructure model — where algorithms evaluate the group law and distance function as black-box oracles but have no access to internal arithmetic structure — any classical algorithm finding the infrastructure period $R_K$ by distance-testing requires $\Omega(\sqrt{R_K})$ oracle queries. Baby-step/giant-step methods achieve $O(\sqrt{R_K})$ queries and are optimal within this model.*
+In the generic infrastructure model — where algorithms evaluate the group law and distance function as black-box oracles but have no access to internal arithmetic structure — any classical algorithm finding the infrastructure period $R_K$ by distance-testing requires $\Omega(\sqrt{R_K})$ oracle queries. Baby-step/giant-step methods achieve $O(\sqrt{R_K})$ queries and are optimal within this model.
 
 **Note.** This is a model-relative lower bound, analogous to the Generic Group Model lower bound for DLP. It does not exclude algorithms that exploit specific arithmetic properties of the real quadratic infrastructure — for example, algorithms based on lattice reduction, Arakelov theory, or number-theoretic properties of the continued fraction expansion of $\sqrt{N}$ — that fall outside the black-box oracle model.
 

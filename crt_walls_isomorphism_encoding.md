@@ -81,7 +81,7 @@ beating $L_N[1/3]$.
 
 ### Lemma 4.1 — Effectively CRT-separating witnesses imply factoring
 
-*Let $F$ be a product-functorial encoding with $F(R) \cong F(\mathbb{F}_p) \times F(\mathbb{F}_q)$. Let $G = F(R)$ and suppose an algorithm outputs a witness $w$ that is effectively CRT-separating (Definition 3.3). Then $N$ can be factored in polynomial time.*
+Let $F$ be a product-functorial encoding with $F(R) \cong F(\mathbb{F}_p) \times F(\mathbb{F}_q)$. Let $G = F(R)$ and suppose an algorithm outputs a witness $w$ that is effectively CRT-separating (Definition 3.3). Then $N$ can be factored in polynomial time.
 
 *Proof.* By Definition 3.3, $w$ enables computation of $e \in R$ with $e^2 = e$, $e \neq 0, 1$. By the Idempotent–Factor Lemma, $\gcd(e, N)$ is a nontrivial factor of $N$. $\square$
 
@@ -89,13 +89,13 @@ beating $L_N[1/3]$.
 
 ### Theorem 4.2 — CRT-Wall for product-functorial Babai encodings
 
-*Let $F$ be a product-functorial algebraic encoding and $N = pq$ squarefree. Suppose a Babai-compatible GI instance $I(N)$ of size $\mathrm{poly}(\log N)$ is constructed from $F(R)$. Then:*
+Let $F$ be a product-functorial algebraic encoding and $N = pq$ squarefree. Suppose a Babai-compatible GI instance $I(N)$ of size $\mathrm{poly}(\log N)$ is constructed from $F(R)$. Then:
 
 1. *(Symmetric case.) If the construction is invariant under swapping the two CRT components, every canonically computable isomorphism witness carries at most Jacobi-type symmetric information and cannot separate $p$ and $q$.*
 
 2. *(Separating case.) If the construction or extracted isomorphism witness is effectively CRT-separating, it generates a nontrivial CRT projector, which by Lemma 4.1 immediately yields a factor of $N$.*
 
-*In particular, Babai's algorithm cannot serve as the "missing last step": either the construction is factorization-blind, or it has already factored $N$ before the isomorphism step.*
+In particular, Babai's algorithm cannot serve as the "missing last step": either the construction is factorization-blind, or it has already factored $N$ before the isomorphism step.
 
 *Proof.* Product-functoriality gives $F(R) \cong F(\mathbb{F}_p) \times F(\mathbb{F}_q)$. Any canonical operation on $F(R)$ either (a) treats both components symmetrically, preserving the swap-invariance, in which case no $p/q$-distinguishing projection exists; or (b) produces an element with asymmetric CRT behavior, which is by definition an effectively CRT-separating witness. By Lemma 4.1, case (b) factors $N$. $\square$
 
@@ -125,7 +125,7 @@ The Hidden Product Matrix-space Isometry (HPMI) problem asks whether factorizati
 
 $$\Phi(\mathcal{M}_R) \cong \Phi(\mathcal{M}_p) \times \Phi(\mathcal{M}_q).$$
 
-*Then the same CRT dichotomy applies: the output is either CRT-symmetric, or it generates a central CRT-separating idempotent that factors $N$ by the Idempotent–Factor Lemma.*
+Then the same CRT dichotomy applies: the output is either CRT-symmetric, or it generates a central CRT-separating idempotent that factors $N$ by the Idempotent–Factor Lemma.
 
 ### 6.2 Non-central projectors — the residual gap
 
