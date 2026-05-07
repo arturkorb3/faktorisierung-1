@@ -8,9 +8,9 @@
 
 Babai's quasi-polynomial graph isomorphism algorithm [Babai 2016] runs in time $n^{O(\log n)}$ for graphs on $n$ vertices. For $n = \mathrm{poly}(\log N)$, this gives complexity
 
-$$
-\exp(O((\log \log N)^2)),
-$$
+> $$
+> \exp(O((\log \log N)^2)),
+> $$
 
 which beats $L_N[1/3]$ asymptotically and would constitute a significant breakthrough for RSA factorization. This raises the question: can factorization of $N = pq$ be encoded as a small explicit group, graph, or matrix-space isomorphism problem of size $\mathrm{poly}(\log N)$?
 
@@ -36,9 +36,9 @@ Throughout, $N = pq$ is an RSA semiprime with $p, q$ distinct odd primes, and $R
 
 By the Chinese Remainder Theorem,
 
-$$
-R \cong \mathbb{F}_p \times \mathbb{F}_q.
-$$
+> $$
+> R \cong \mathbb{F}_p \times \mathbb{F}_q.
+> $$
 
 The two projections $\pi_p: R \to \mathbb{F}_p$ and $\pi_q: R \to \mathbb{F}_q$ are the *CRT components*. An element $a \in R$ is a *nontrivial zero-divisor* if $a \neq 0$ and $a$ is not a unit; equivalently, $\pi_p(a) = 0$ or $\pi_q(a) = 0$ but not both. Such elements satisfy $1 \lt \gcd(a, N) \lt N$.
 
@@ -65,9 +65,9 @@ These two problems must not be conflated. All "factoring-equivalent" claims in t
 
 For Babai-compatible instances, the algorithm runs in time
 
-$$
-n^{O(\log n)} = \mathrm{poly}(\log N)^{O(\log \mathrm{poly}(\log N))} = \exp(O((\log\log N)^2)),
-$$
+> $$
+> n^{O(\log n)} = \mathrm{poly}(\log N)^{O(\log \mathrm{poly}(\log N))} = \exp(O((\log\log N)^2)),
+> $$
 
 beating $L_N[1/3]$.
 
@@ -123,7 +123,7 @@ The Hidden Product Matrix-space Isometry (HPMI) problem asks whether factorizati
 
 **Theorem 6.1 — Extension to matrix-space invariants.** Let $\mathcal{M}$ be a matrix space over $R$ and let $\Phi(\mathcal{M})$ be a product-compatible algebraic invariant (adjoint algebra, centroid, endomorphism ring, radical, determinantal ideals):
 
-$$\Phi(\mathcal{M}_R) \cong \Phi(\mathcal{M}_p) \times \Phi(\mathcal{M}_q).$$
+> $$\Phi(\mathcal{M}_R) \cong \Phi(\mathcal{M}_p) \times \Phi(\mathcal{M}_q).$$
 
 Then the same CRT dichotomy applies: the output is either CRT-symmetric, or it generates a central CRT-separating idempotent that factors $N$ by the Idempotent–Factor Lemma.
 
@@ -131,7 +131,7 @@ Then the same CRT dichotomy applies: the output is either CRT-symmetric, or it g
 
 Not every idempotent in $\mathrm{Adj}(\mathcal{M})$ factors $N$. A matrix idempotent such as
 
-$$E = \begin{pmatrix}1 & 0 \cr 0 & 0\end{pmatrix} \in \mathrm{Mat}_2(\mathbb{F}_p)$$
+> $$E = \begin{pmatrix}1 & 0 \cr 0 & 0\end{pmatrix} \in \mathrm{Mat}_2(\mathbb{F}_p)$$
 
 is a nontrivial projector but carries no CRT information about $p$ vs. $q$. Factorization follows only from a *central scalar* idempotent $eI$ with $e \in Z(R)$, $e^2 \equiv e \pmod{N}$, $e \notin \{0,1\}$.
 
@@ -155,13 +155,13 @@ This creates a narrow residual gap: a non-central idempotent in $\mathrm{Adj}(\m
 
 **Counterexample.** Choose public $d \in R^\ast$ with Jacobi symbol $\bigl(\frac{d}{N}\bigr) = -1$, computable in polynomial time without factorization. This forces $\bigl(\frac{d}{p}\bigr) \neq \bigl(\frac{d}{q}\bigr)$. Define
 
-$$
-\mathcal{S}_d = \bigl\lbrace \begin{pmatrix} x & dy & 0 \\ y & x & 0 \\ 0 & 0 & 0 \end{pmatrix} : x, y \in R \bigr\rbrace \subseteq \mathrm{Mat}_3(R).
-$$
+> $$
+> \mathcal{S}_d = \bigl\lbrace \begin{pmatrix} x & dy & 0 \\ y & x & 0 \\ 0 & 0 & 0 \end{pmatrix} : x, y \in R \bigr\rbrace \subseteq \mathrm{Mat}_3(R).
+> $$
 
 Every element is singular. The $2 \times 2$ upper block has determinant $x^2 - dy^2$. Over $\mathbb{F}_r$, a nonzero rank-1 element exists iff $d$ is a quadratic residue mod $r$. Therefore
 
-$$\mathrm{minrank}_{\mathbb{F}_p}(\mathcal{S}_d) \neq \mathrm{minrank}_{\mathbb{F}_q}(\mathcal{S}_d),$$
+> $$\mathrm{minrank}_{\mathbb{F}_p}(\mathcal{S}_d) \neq \mathrm{minrank}_{\mathbb{F}_q}(\mathcal{S}_d),$$
 
 yet no coefficient in the definition of $\mathcal{S}_d$ is a nontrivial zero-divisor modulo $N$. Local rank asymmetry exists publicly without an immediate factor. $\square$
 
@@ -181,7 +181,7 @@ The interreduction is stated for the $\mathcal{S}_d$ case where $\bigl(\frac{d}{
 
 **Factoring $\Rightarrow$ QR-Witness (asymmetric isotropic construction).** Given $p, q$: WLOG $\bigl(\frac{d}{p}\bigr) = +1$ and $\bigl(\frac{d}{q}\bigr) = -1$. Set
 
-$$x_p \equiv \sqrt{d} \pmod{p}, \quad y_p \equiv 1 \pmod{p}, \qquad x_q \equiv 0 \pmod{q}, \quad y_q \equiv 0 \pmod{q}.$$
+> $$x_p \equiv \sqrt{d} \pmod{p}, \quad y_p \equiv 1 \pmod{p}, \qquad x_q \equiv 0 \pmod{q}, \quad y_q \equiv 0 \pmod{q}.$$
 
 CRT-lift to $(x, y) \in R^2$. Then $x^2 - dy^2 \equiv 0 \pmod{p}$ (since $x_p^2 = d$) and $x^2 - dy^2 \equiv 0 \pmod{q}$ (since $x_q = y_q = 0$), so $x^2 \equiv dy^2 \pmod{N}$. But $x \equiv 0 \pmod{q}$ while $x \not\equiv 0 \pmod{p}$, so $x$ is a nontrivial zero-divisor and $\gcd(x, N) = q$.
 

@@ -24,7 +24,7 @@ A common source of confusion is the conflation of three distinct computational p
 
 **Proposition 2.1 (Precision trap).** The three problems are strictly inequivalent:
 
-$$\mathrm{REG}_{\mathrm{num}} \not\equiv \mathrm{REG}_{\mathrm{unit}} \not\equiv \mathrm{Pell}.$$
+> $$\mathrm{REG}_{\mathrm{num}} \not\equiv \mathrm{REG}_{\mathrm{unit}} \not\equiv \mathrm{Pell}.$$
 
 *Proof.* (i) $\mathrm{REG}_{\mathrm{num}}$: a numerical approximation to $R_D$ with $\mathrm{poly}(\log D)$ bits. Extracting the class number $h$ from $hR$ requires error $< 1/(2h)$, polynomially many bits. This step is not the bottleneck.
 
@@ -132,7 +132,7 @@ The Hallgren comparison therefore strengthens, not weakens, the OP4 barrier: it 
 
 The regulator–factorization complexity bridge has a precise shape:
 
-$$\mathrm{REG}_{\mathrm{num}} < \mathrm{REG}_{\mathrm{unit}} \approx \mathrm{Pell} \quad\text{(strictly increasing difficulty).}$$
+> $$\mathrm{REG}_{\mathrm{num}} < \mathrm{REG}_{\mathrm{unit}} \approx \mathrm{Pell} \quad\text{(strictly increasing difficulty).}$$
 
 Further findings:
 

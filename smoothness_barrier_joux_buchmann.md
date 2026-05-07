@@ -69,11 +69,11 @@ In the class of Buchmann-style regulator algorithms for fixed real quadratic deg
 
 **Proof sketch.** Set the factor base size $B = L_D[a, c]$ and let $X = D^{O(1)}$ be the size of candidate relation norms, so $\log X \asymp \log D$. The smoothness parameter is
 
-$$u = \frac{\log X}{\log B} \asymp \frac{\log D}{(\log D)^a (\log\log D)^{1-a}} = \frac{(\log D)^{1-a}}{(\log\log D)^{1-a}}.$$
+> $$u = \frac{\log X}{\log B} \asymp \frac{\log D}{(\log D)^a (\log\log D)^{1-a}} = \frac{(\log D)^{1-a}}{(\log\log D)^{1-a}}.$$
 
 By the Dickman–CEP heuristic the inverse smoothness probability is $\rho(u)^{-1} = L_D[1-a, O(1)]$. Collecting $L_D[a, O(1)]$ independent relations (one per factor-base element) at cost $\rho(u)^{-1}$ each gives total relation-collection cost
 
-$$L_D[a, O(1)] \cdot L_D[1-a, O(1)] = L_D[\max(a, 1-a), O(1)].$$
+> $$L_D[a, O(1)] \cdot L_D[1-a, O(1)] = L_D[\max(a, 1-a), O(1)].$$
 
 This is minimized at $a = 1/2$, giving $L_D[1/2, O(1)]$.
 
