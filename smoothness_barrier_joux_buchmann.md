@@ -114,10 +114,10 @@ No such mechanism is known. The Joux/BGJT bridge to real quadratic factorization
 
 **[Joux 2013]** A. Joux. "A new index calculus algorithm with complexity $L(1/4 + o(1))$ in small characteristic." *SAC 2013*, LNCS 8282, pp. 355–379. Springer, 2014. doi:10.1007/978-3-662-43414-7_18
 
+**[Canfield–Erdős–Pomerance 1983]** E.R. Canfield, P. Erdős, C. Pomerance. "On a problem of Oppenheim concerning 'factorisatio numerorum'." *Journal of Number Theory* 17 (1983), no. 1, 1–28. doi:10.1016/0022-314X(83)90020-7 *(source of the Dickman–CEP smoothness heuristic used in Theorem 1)*
+
 **[Shanks 1971]** D. Shanks. "Class number, a theory of factorization, and genera." *Proc. Symposia in Pure Mathematics*, vol. 20, Amer. Math. Soc., 1971, pp. 415–440.
 
 **[Shoup 1997]** V. Shoup. "Lower bounds for discrete logarithms and related problems." *EUROCRYPT 1997*, LNCS 1233, pp. 256–266. Springer. doi:10.1007/3-540-69053-0_18 *(cited for the generic group model lower bound underlying Theorem 2)*
 
-**[Williams 1982]** H.C. Williams. "A $p+1$ method of factoring." *Mathematics of Computation* 39 (1982), no. 159, 225–234.
-
-**[Williams 1981]** H.C. Williams. "A modification of the factorization algorithm of Brillhart, Morrison and Selfridge." *Mathematics of Computation* 36 (1981), no. 154, 399–403. *(SQUFOF with multipliers)*
+**[Williams 1981]** H.C. Williams. "A modification of the factorization algorithm of Brillhart, Morrison and Selfridge." *Mathematics of Computation* 36 (1981), no. 154, 399–403.

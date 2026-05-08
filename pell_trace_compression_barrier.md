@@ -57,7 +57,7 @@ If $(t_D, u_D)$ is the primitive solution of $t^2 - Du^2 = 4$ and $N \mid D$, th
 
 Setting $D = N$ (or $D = 4N$ for $N \equiv 3 \pmod 4$), the reduced ambiguous form at infrastructure distance $R_D/2$ from the principal form has canonical shape $(p, 0, -q)$. Finding this form is equivalent to constructing a factoring certificate directly — this is precisely the Shanks SQUFOF algorithm [Shanks 1971].
 
-**Empirical confirmation.** Over 50 random semiprimes: 13/20 yield a direct half-period gcd from $\sqrt{N}$; 50/50 succeed with small multipliers $m \leq 20$ (Shanks–Williams [1982]). This confirms the classical SQUFOF heuristic but provides no improvement below $L[1/2]$, since the half-period position must be traversed by continued fraction expansion.
+**Empirical confirmation.** Over 50 random semiprimes: 13/20 yield a direct half-period gcd from $\sqrt{N}$; 50/50 succeed with small multipliers $m \leq 20$ (Shanks–Williams [Williams 1981]). This confirms the classical SQUFOF heuristic but provides no improvement below $L[1/2]$, since the half-period position must be traversed by continued fraction expansion.
 
 **Conclusion.** The half-distance / square-form inversion route is closed as a classical SQUFOF variant. No new leverage beyond Shanks–Williams is found here.
 
@@ -156,11 +156,11 @@ The single remaining open question is OP4/H3. Its resolution in either direction
 
 **[Biasse–Fieker 2014]** J. Biasse, C. Fieker. "Subexponential class group and unit group computation in large degree number fields." *LMS Journal of Computation and Mathematics* 17 (2014), 385–403. doi:10.1112/S1461157014000345
 
-**[BPW 1986]** J. Buchmann, A. Pethő, H.C. Williams. "A note on the size of the regulator of a real quadratic field." *Mathematics of Computation* 47 (1986), no. 175, 579–591. doi:10.2307/2008197 *(source of the BPW conjecture)*
+**[BPW 1986]** J. Buchmann, A. Pethő, H.C. Williams. "A note on the size of the regulator of a real quadratic field." *Mathematics of Computation* 47 (1986), no. 175, 579–591. doi:10.2307/2008197 *(regulator size estimates; cited for the BPW regulator–factorization connection)*
 
 **[Buchmann 1990]** J. Buchmann. "A subexponential algorithm for the determination of class groups and regulators of algebraic number fields." *Séminaire de Théorie des Nombres, Paris 1988–1989*, Progress in Mathematics 91, Birkhäuser, 1990, pp. 27–41.
 
-**[Cohen–Lenstra 1984]** H. Cohen, H.W. Lenstra Jr. "Heuristics on class groups of number fields." *Number Theory Noordwijkerhout 1983*, LNCS 106, pp. 33–62. Springer, 1984. doi:10.1007/3-540-12548-2_2
+**[Cohen–Lenstra 1984]** H. Cohen, H.W. Lenstra Jr. "Heuristics on class groups of number fields." *Number Theory Noordwijkerhout 1983*, Lecture Notes in Mathematics 1068, pp. 33–62. Springer, 1984. doi:10.1007/3-540-12548-2_2
 
 **[Goldwasser–Micali 1984]** S. Goldwasser, S. Micali. "Probabilistic encryption." *Journal of Computer and System Sciences* 28 (1984), no. 2, 270–299. doi:10.1016/0022-0000(84)90070-9
 
@@ -168,6 +168,4 @@ The single remaining open question is OP4/H3. Its resolution in either direction
 
 **[Shanks 1971]** D. Shanks. "Class number, a theory of factorization, and genera." *Proc. Symposia in Pure Mathematics*, vol. 20, Amer. Math. Soc., 1971, pp. 415–440.
 
-**[Williams 1982]** H.C. Williams. "A $p+1$ method of factoring." *Mathematics of Computation* 39 (1982), no. 159, 225–234.
-
-**[Williams 1981]** H.C. Williams. "A modification of the factorization algorithm of Brillhart, Morrison and Selfridge." *Mathematics of Computation* 36 (1981), no. 154, 399–403. *(SQUFOF with multipliers)*
+**[Williams 1981]** H.C. Williams. "A modification of the factorization algorithm of Brillhart, Morrison and Selfridge." *Mathematics of Computation* 36 (1981), no. 154, 399–403.
