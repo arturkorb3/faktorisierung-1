@@ -1,28 +1,26 @@
-# CRT Barriers in Classical Integer Factorization
+# Classical Factorization Barriers
 
-This repository collects three exploratory research manuscripts on structural barriers in classical integer factorization.
+**Three barrier manuscripts on classical integer factorization of RSA semiprimes $N = pq$.**
 
-The project investigates whether several proposed routes toward faster classical factorization of RSA-type semiprimes can bypass the standard CRT/factorization barrier. The conclusion of the current drafts is negative within the stated models: the analyzed approaches either remain CRT-symmetric or produce a witness that already factors the modulus.
+🔗 **[Published site with rendered math](https://arturkorb3.github.io/faktorisierung-1/)**
 
-## Contents
+---
 
-### Paper A — Fixed-Degree Smoothness Barriers for Real Quadratic Infrastructure and the Joux–Buchmann Bridge
+This repository investigates whether several proposed routes toward faster classical factorization of RSA-type semiprimes can bypass the standard CRT/factorization barrier. The conclusion of the current drafts is negative within the stated models: the analyzed approaches either remain CRT-symmetric or produce a witness that already factors the modulus.
 
-Analyzes whether the Joux/BGJT small-characteristic discrete logarithm strategy has a structural analogue for real quadratic regulators. The draft identifies fixed-degree smoothness and generic infrastructure period-finding barriers.
+## Papers
 
-File: `smoothness_barrier_joux_buchmann.md`
+### [Paper A — The Joux–Buchmann Bridge Revisited](https://arturkorb3.github.io/faktorisierung-1/smoothness-barrier/) · [PDF](smoothness_barrier_joux_buchmann.pdf)
 
-### Paper B — Compression Barriers for the Pell Congruence Trace
+Revised account of why the Joux/BGJT quasi-polynomial strategy for discrete logarithms in small-characteristic fields does not transfer to real quadratic regulators. Proves a rigorous Frobenius obstruction and a structural tower obstruction. Continued-fraction loophole analysis shows graph-only cycle selection and dynamic principality both collapse to static principality. No sub-*L*[1/2] mechanism found.
 
-Analyzes the regulator–factorization bridge through the Pell trace residue `t_{mN} mod N`. The draft distinguishes predicate recognition from witness generation and formulates the OP4/H3 compression barrier as a conjectural obstruction.
+### [Paper B — Compression Barrier: Pell Trace](https://arturkorb3.github.io/faktorisierung-1/pell-trace-barrier/) · [PDF](pell_trace_compression_barrier.pdf)
 
-File: `pell_trace_compression_barrier.md`
+Analyzes the regulator–factorization bridge via Pell trace residues `t_{mN} mod N`. Proves that computing the trace nontrivially is factoring-equivalent (Lemma 5.1). Classifies four natural routes (representation-theoretic, Kloosterman, multilevel, ray-class), each collapsing to the same CRT wall. States the OP4/H3 compression barrier conjecture.
 
-### Paper C — CRT Walls for Product-Functorial Isomorphism Encodings of Semiprime Factorization
+### [Paper C — CRT Walls: Product-Functorial Isomorphism Encodings](https://arturkorb3.github.io/faktorisierung-1/crt-walls/) · [PDF](crt_walls_isomorphism_encoding.pdf)
 
-Analyzes whether semiprime factorization can be encoded as a small product-functorial group, graph, or matrix-space isomorphism problem suitable for Babai-style algorithms. The draft proves a CRT-wall dichotomy and studies the singular matrix-space boundary.
-
-File: `crt_walls_isomorphism_encoding.md`
+Proves that semiprime factorization cannot be encoded as a small product-functorial group or matrix-space isomorphism problem suitable for Babai's quasi-polynomial algorithm. Establishes a CRT-wall dichotomy and studies the genuine boundary in singular matrix spaces.
 
 ## Status
 
