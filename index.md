@@ -58,3 +58,7 @@ Suggested informal citation:
 ## License
 
 Released under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+---
+
+*Repository and GitHub profile: [github.com/arturkorb3/faktorisierung-1](https://github.com/arturkorb3/faktorisierung-1) · [github.com/arturkorb3](https://github.com/arturkorb3)*
