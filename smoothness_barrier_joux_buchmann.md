@@ -598,14 +598,14 @@ $$
 
 Then:
 
-1. 
+**(1)**
 
 $$
    \sqrt D=
    \frac{p_n\alpha_{n+1}+p_{n-1}}{q_n\alpha_{n+1}+q_{n-1}};
 $$
 
-2. 
+**(2)**
 
 $$
    p_n=q_nP_{n+1}+q_{n-1}Q_{n+1},
@@ -613,7 +613,7 @@ $$
    Dq_n=p_nP_{n+1}+p_{n-1}Q_{n+1};
 $$
 
-3. 
+**(3)**
 
 $$
    p_n^2-Dq_n^2=(-1)^{n+1}Q_{n+1}.
@@ -637,20 +637,20 @@ $$
 
 Then:
 
-1. 
+**(1)**
 
 $$
    p_n-\sqrt D\,q_n=
    \frac{(-1)^{n+1}}{q_n(\alpha_{n+1}+x_n)};
 $$
 
-2. 
+**(2)**
 
 $$
    Q_{n+1}=\frac{p_n+\sqrt D\,q_n}{q_n(\alpha_{n+1}+x_n)};
 $$
 
-3. 
+**(3)**
 
 $$
    q_{n+1}=(a_{n+1}+x_n)q_n,
@@ -658,19 +658,19 @@ $$
    \log q_{n+1}-\log q_n=\log(a_{n+1}+x_n);
 $$
 
-4. 
+**(4)**
 
 $$
    \frac{\sqrt D}{a_{n+1}+2}<Q_{n+1}<\frac{2\sqrt D+1}{a_{n+1}},
 $$
 
-   hence
+hence
 
 $$
    Q_{n+1}\asymp \frac{\sqrt D}{a_{n+1}}
 $$
 
-   with absolute constants.
+with absolute constants.
 
 #### Proof
 The first formula follows by dividing the standard determinant identity by $q_n\alpha_{n+1}+q_{n-1}$. The second follows by multiplying by $p_n+\sqrt D q_n$ and using Proposition 6.5(3). The third is the recurrence for convergent denominators rewritten using $x_n$. The final inequalities follow from
