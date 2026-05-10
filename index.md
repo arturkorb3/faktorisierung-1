@@ -19,11 +19,11 @@ These documents are public research notes / exploratory manuscript drafts. They 
 
 ---
 
-## Paper A— Smoothness Barrier: Joux–Buchmann Bridge
+## Paper A — The Joux–Buchmann Bridge Revisited
 
 [Full text](smoothness-barrier/) · [PDF](smoothness_barrier_joux_buchmann.pdf)
 
-Analyzes whether the Joux/BGJT quasi-polynomial strategy for discrete logarithms in small-characteristic fields transfers to real quadratic regulators. Proves two barriers: the smooth-relation barrier is $L_D[1/2]$ (Theorem 1), and infrastructure period-finding requires $\Omega(\sqrt{R_K})$ oracle queries (Theorem 2). Gate IV of the Joux pipeline fails.
+Revised account of why the Joux/BGJT quasi-polynomial strategy for discrete logarithms does not transfer to real quadratic regulators. Proves a rigorous Frobenius obstruction (Theorem T1: no public residue-level Frobenius substitute exists without factoring data) and a structural tower obstruction (Theorem T2: bounded-degree towers cannot create Joux-style recursive depth). Continued-fraction loophole analysis shows graph-only cycle selection and dynamic principality on the thin split family both collapse to static principality. No sub-$L[1/2]$ mechanism found.
 
 ---
 
